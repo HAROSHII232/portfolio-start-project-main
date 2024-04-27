@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import photo from "../../../assets/images/promo.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { Pagination } from "../../../components/pagination/Pagination";
 
 export const Promo = () => {
   return (
@@ -18,12 +19,8 @@ export const Promo = () => {
           <LeftArrow></LeftArrow>
           <RightArrow></RightArrow>
         </FlexWrapper>
-        <FlexWrapper gap={"18px"}>
-          <Dot />
-          <Dot />
-          <Dot />
-          <Dot />
-        </FlexWrapper>
+        
+        <Pagination />
       </FlexWrapper>
       <Photo src={photo} />
     </FlexWrapper>
@@ -52,9 +49,3 @@ const LeftArrow = styled.button`
 `;
 
 const RightArrow = styled(LeftArrow)``;
-
-const Dot = styled.div`
-  border: 3px solid #28553f;
-  width: 39px;
-  height: 0px;
-`;
