@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import { Promo } from "../promo/Promo";
 import { Advantages } from "../advantages/Advantages";
+import { Products } from "../products/Products";
 
 export const Main = () => {
   return (
     <StyledMain>
       <Promo />
       <Advantages />
+      <Products />
     </StyledMain>
   );
 };

@@ -1,24 +1,20 @@
 import styled from "styled-components";
 
-export const Menu = () => {
+type MenuPropsType = {
+  menuItems: Array<string>;
+};
+
+export const Menu = (props: MenuPropsType) => {
   return (
     <StyledMenu>
       <ul>
-        <li>
-          <a href="">Каталог</a>
-        </li>
-        <li>
-          <a href="">Акции</a>
-        </li>
-        <li>
-          <a href="">Блог</a>
-        </li>
-        <li>
-          <a href="">Сотрудничество</a>
-        </li>
-        <li>
-          <a href="">Оплата и доставка</a>
-        </li>
+        {props.menuItems.map((item, index) => {
+          return (
+            <li key={index}>
+              <a href="#">{item}</a>
+            </li>
+          );
+        })}
       </ul>
     </StyledMenu>
   );
