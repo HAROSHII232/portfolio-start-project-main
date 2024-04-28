@@ -4,6 +4,7 @@ import { Advantages } from "../advantages/Advantages";
 import { Products } from "../products/Products";
 import { Offers } from "../offers/Offers";
 import { Ideas } from "../ideas/Ideas";
+import { Contacts } from "../contacts/Contacts";
 
 export const Main = () => {
   return (
@@ -13,6 +14,7 @@ export const Main = () => {
       <Products />
       <Offers />
       <Ideas />
+      <Contacts/>
     </StyledMain>
   );
 };
