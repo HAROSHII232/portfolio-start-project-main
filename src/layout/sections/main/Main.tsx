@@ -5,6 +5,7 @@ import { Products } from "../products/Products";
 import { Offers } from "../offers/Offers";
 import { Ideas } from "../ideas/Ideas";
 import { Contacts } from "../contacts/Contacts";
+import { Footer } from "../../footer/Footer";
 
 export const Main = () => {
   return (
@@ -14,7 +15,8 @@ export const Main = () => {
       <Products />
       <Offers />
       <Ideas />
-      <Contacts/>
+      <Contacts />
+      <Footer />
     </StyledMain>
   );
 };
