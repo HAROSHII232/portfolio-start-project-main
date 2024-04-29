@@ -16,7 +16,6 @@ export const Main = () => {
       <Offers />
       <Ideas />
       <Contacts />
-      <Footer />
     </StyledMain>
   );
 };
