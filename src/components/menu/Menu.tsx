@@ -1,27 +1,11 @@
 import styled from "styled-components";
 
-type MenuPropsType = {
+type FooterMenuPropsType = {
   menuItems: Array<string>;
   menuTitle?: string;
 };
 
-export const Menu = (props: MenuPropsType) => {
-  return (
-    <StyledMenu>
-      <ul>
-        {props.menuItems.map((item, index) => {
-          return (
-            <li key={index}>
-              <a href="#">{item}</a>
-            </li>
-          );
-        })}
-      </ul>
-    </StyledMenu>
-  );
-};
-
-export const FooterMenu = (props: MenuPropsType) => {
+export const FooterMenu = (props: FooterMenuPropsType) => {
   return (
     <StyledFooterMenu>
       <span>{props.menuTitle}</span>
@@ -37,13 +21,6 @@ export const FooterMenu = (props: MenuPropsType) => {
     </StyledFooterMenu>
   );
 };
-
-const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 90px;
-  }
-`;
 
 const StyledFooterMenu = styled.nav`
   ul {
