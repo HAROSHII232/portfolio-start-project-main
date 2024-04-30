@@ -3,6 +3,7 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import footerLogo from "../../assets/images/logo-footer.png";
 import { Icon } from "../../components/icon/Icon";
 import { FooterMenu } from "../../components/menu/Menu";
+import { theme } from "../../styles/Theme";
 
 const footerMenuItems = ["Delivery & returns", "FAQ", "Contacts", "Blog"];
 const footerCatalogItems = ["New arrivals", "Trending now", "Sales", "Brands"];
@@ -77,7 +78,9 @@ export const Footer = () => {
   );
 };
 
-const StyledFooter = styled.footer``;
+const StyledFooter = styled.footer`
+  background-color: ${theme.colors.secondaryBg};
+`;
 
 const FooterLogo = styled.img`
   width: 268px;

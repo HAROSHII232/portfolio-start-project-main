@@ -35,7 +35,7 @@ export const Advantages = () => {
 };
 
 const StyledAdvantages = styled.section`
-  background-color: blueviolet;
+
 `;
 
 const Photo = styled.img`

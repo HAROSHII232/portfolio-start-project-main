@@ -58,5 +58,5 @@ export const Offers = () => {
 
 const StyledOffer = styled.section`
   min-height: 100vh;
-  background-color: #cb469f;
+
 `;

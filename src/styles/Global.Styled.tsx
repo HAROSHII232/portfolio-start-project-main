@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./Theme";
 
 const GlobalStyle = createGlobalStyle`
 *,
@@ -16,9 +17,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: ${theme.colors.primaryFont}
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -30,6 +33,10 @@ button {
   background-color:unset;
   border: none;
   cursor: pointer;
+}
+
+section {
+  background-color: ${theme.colors.primaryBg}
 }
 `;
 

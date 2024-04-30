@@ -30,5 +30,5 @@ export const Products = () => {
 
 const StyledProducts = styled.section`
   min-height: 100vh;
-  background-color: #89b869;
+
 `;
