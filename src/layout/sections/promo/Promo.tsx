@@ -10,19 +10,19 @@ export const Promo = () => {
   return (
     <StyledPromo>
       <Container>
-        <FlexWrapper>
-          <FlexWrapper direction="column" justify="center">
-            <PromoInfo>
-              <SmallText>камень с душой</SmallText>
-              <MainTitle>
-                Каменные изделия <span>для вашего дома</span>
-              </MainTitle>
-              <FlexWrapper>
-                <button>Рассчитать стоимость</button>
-                <button>Связаться с нами</button>
-              </FlexWrapper>
-            </PromoInfo>
+        <FlexWrapper gap="125px">
+          <PromoInfo>
+            <SmallText>камень с душой</SmallText>
+            <MainTitle>
+              Каменные изделия <span>для вашего дома</span>
+            </MainTitle>
+            <FlexWrapper>
+              <button>Рассчитать стоимость</button>
+              <button>Связаться с нами</button>
+            </FlexWrapper>
+          </PromoInfo>
 
+          <FlexWrapper direction="column" justify="flex-end">
             <FlexWrapper>
               <LeftArrow></LeftArrow>
               <RightArrow></RightArrow>
@@ -30,6 +30,7 @@ export const Promo = () => {
 
             <Pagination />
           </FlexWrapper>
+
           <PhotoWrapper>
             <Photo src={photo} alt="Проект: сан-узел" />
           </PhotoWrapper>
@@ -49,10 +50,19 @@ const StyledPromo = styled.section`
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  & > ${Container} > ${FlexWrapper} {
+    position: relative;
+    padding: 40px 0px;
+  }
 `;
 
 const PromoInfo = styled.div`
   position: absolute;
+  top: 150px;
+  left: -100px;
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
   padding: 67px 42px 58px 102px;
@@ -62,19 +72,18 @@ const PromoInfo = styled.div`
 
 const PhotoWrapper = styled.div`
   position: relative;
-  z-index:0;
+  z-index: 0;
 
   &::before {
     content: "";
     position: absolute;
-    left:-25px;
-    top:35px;
-    z-index:-1;
+    left: -25px;
+    top: 25px;
+    z-index: -1;
 
     border: 2px solid ${theme.colors.accent};
     width: 888px;
     height: 582px;
-
   }
 `;
 
