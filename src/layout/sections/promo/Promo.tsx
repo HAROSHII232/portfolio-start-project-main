@@ -2,30 +2,81 @@ import styled from "styled-components";
 import photo from "../../../assets/images/promo.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Pagination } from "../../../components/pagination/Pagination";
+import { Container } from "../../../components/Container";
+import backgroundImg from "../../../assets/images/header-background.webp";
+import { theme } from "../../../styles/Theme";
 
 export const Promo = () => {
   return (
-    <FlexWrapper>
-      <FlexWrapper direction={"column"}>
-        <span>камень с душой</span>
-        <MainTitle>
-          Каменные изделия <span>для вашего дома</span>
-        </MainTitle>
+    <StyledPromo>
+      <Container>
         <FlexWrapper>
-          <button>Рассчитать стоимость</button>
-          <button>Связаться с нами</button>
+          <FlexWrapper direction="column" justify="center">
+            <PromoInfo>
+              <SmallText>камень с душой</SmallText>
+              <MainTitle>
+                Каменные изделия <span>для вашего дома</span>
+              </MainTitle>
+              <FlexWrapper>
+                <button>Рассчитать стоимость</button>
+                <button>Связаться с нами</button>
+              </FlexWrapper>
+            </PromoInfo>
+
+            <FlexWrapper>
+              <LeftArrow></LeftArrow>
+              <RightArrow></RightArrow>
+            </FlexWrapper>
+
+            <Pagination />
+          </FlexWrapper>
+          <PhotoWrapper>
+            <Photo src={photo} alt="Проект: сан-узел" />
+          </PhotoWrapper>
         </FlexWrapper>
-        <FlexWrapper>
-          <LeftArrow></LeftArrow>
-          <RightArrow></RightArrow>
-        </FlexWrapper>
-        
-        <Pagination />
-      </FlexWrapper>
-      <Photo src={photo} />
-    </FlexWrapper>
+      </Container>
+    </StyledPromo>
   );
 };
+
+const StyledPromo = styled.section`
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.93) 0%,
+      rgba(0, 0, 0, 0.93) 100%
+    ),
+    url(${backgroundImg});
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
+
+const PromoInfo = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 67px 42px 58px 102px;
+  max-width: 743px;
+  background-color: ${theme.colors.secondaryBg};
+`;
+
+const PhotoWrapper = styled.div`
+  position: relative;
+  z-index:0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left:-25px;
+    top:35px;
+    z-index:-1;
+
+    border: 2px solid ${theme.colors.accent};
+    width: 888px;
+    height: 582px;
+
+  }
+`;
 
 const Photo = styled.img`
   width: 978px;
@@ -40,6 +91,24 @@ const MainTitle = styled.h1`
 
   span {
     color: #28553f;
+  }
+`;
+
+const SmallText = styled.span`
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #9c9c9c;
+
+  :after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 140px;
+    width: 82px;
+    height: 1px;
+    background-color: #9c9c9c;
   }
 `;
 
