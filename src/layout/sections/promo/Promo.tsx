@@ -53,7 +53,6 @@ const StyledPromo = styled.section`
 
   & > ${Container} > ${FlexWrapper} {
     position: relative;
-    padding: 40px 0px;
   }
 `;
 

@@ -36,9 +36,9 @@ const ListItem = styled.li`
     content: "";
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0px;
+    right: 0px;
     display: inline-block;
-    width: 100%;
     height: 2px;
     background-color: ${theme.colors.primaryFont};
 
@@ -46,7 +46,7 @@ const ListItem = styled.li`
   }
 
   &:hover {
-    &::before {
+    &::after {
       transform: scale(1);
     }
   }

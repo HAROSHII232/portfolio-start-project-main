@@ -37,8 +37,10 @@ button {
 }
 
 section {
-  background-color: ${theme.colors.primaryBg}
+  background-color: ${theme.colors.primaryBg};
+  padding: 65px 0px;
 }
+
 `;
 
 export default GlobalStyle;
