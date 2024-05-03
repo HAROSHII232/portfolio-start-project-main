@@ -4,33 +4,34 @@ import photo from "../../../assets/images/advantages.webp";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Advantage } from "./advantage/Advantage";
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const Advantages = () => {
   return (
     <StyledAdvantages>
       <Container>
         <SectionTitle>
-            наши преимущества - <span>ваш результат</span>
+          наши преимущества - <span>ваш результат</span>
         </SectionTitle>
-        <FlexWrapper>
-          <FlexWrapper direction="column"> 
+        <FlexWrapper align="center" gap="40px">
+          <FlexWrapper direction="column" gap="63px">
             <Advantage
               title={"Новейшее итальянское оборудование Donatoni"}
-              skillNumber={"1"}
+              skillNumber={"01"}
             />
-            <Advantage title={"Собственное произодство"} skillNumber={"2"} />
+            <Advantage title={"Собственное произодство"} skillNumber={"02"} />
             <Advantage
               title={"Широкий ассортимент разнообразных камней"}
-              skillNumber={"3"}
+              skillNumber={"03"}
             />
           </FlexWrapper>
-          <Photo src={photo} alt="проект ванной комнаты"/>
-          <FlexWrapper direction="column">
-            <Advantage title={"Изделия из наличия"} skillNumber={"4"} />
-            <Advantage title={"Работаем под ключ"} skillNumber={"5"} />
+          <Photo src={photo} alt="проект ванной комнаты" />
+          <FlexWrapper direction="column" gap="63px">
+            <Advantage title={"Изделия из наличия"} skillNumber={"04"} />
+            <Advantage title={"Работаем под ключ"} skillNumber={"05"} />
             <Advantage
               title={"Консультации по уходу за иделием из камня"}
-              skillNumber={"6"}
+              skillNumber={"06"}
             />
           </FlexWrapper>
         </FlexWrapper>
@@ -39,10 +40,21 @@ export const Advantages = () => {
   );
 };
 
-const StyledAdvantages = styled.section``;
+const StyledAdvantages = styled.section`
+  & ${SectionTitle} {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  & ${Container} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
 
 const Photo = styled.img`
   width: 369px;
   height: 587px;
   object-fit: cover;
+  border: 7px solid ${theme.colors.accent};
 `;

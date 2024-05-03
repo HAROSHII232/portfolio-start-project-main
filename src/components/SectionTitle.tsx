@@ -5,6 +5,7 @@ export const SectionTitle = styled.h2`
   position: relative;
   font-weight: 400;
   font-size: 40px;
+  max-width: 530px;
   text-transform: uppercase;
   text-align: left;
   color: #282a30;
