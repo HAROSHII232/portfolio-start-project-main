@@ -12,13 +12,15 @@ export const Advantage = (props: AdvantagePropsType) => {
   return (
     <StyledAdvantage>
       <AdvantageTitle>{props.title}</AdvantageTitle>
-      <FlexWrapper align="center" justify="space-between">
-        <Icon
-          iconId={"arrow-down"}
-          width="15"
-          height="15"
-          viewBox="0 0 15 15"
-        />
+      <FlexWrapper align="center">
+        <IconWrapper>
+          <Icon
+            iconId={"arrow-down"}
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+          />
+        </IconWrapper>
         <Line />
         <AdvantageNumber>{props.skillNumber}</AdvantageNumber>
       </FlexWrapper>
@@ -28,18 +30,25 @@ export const Advantage = (props: AdvantagePropsType) => {
 
 const StyledAdvantage = styled.div``;
 
+const IconWrapper = styled.div`
+
+  padding: 0px 10px;
+  display: flex;
+  align-items:center;
+
+`;
+
 const Line = styled.span`
   background-color: ${theme.colors.accent};
   height: 1px;
   width: 82%;
-  margin-left: 15px;
 `;
 
 const AdvantageTitle = styled.h3`
   font-weight: 600;
   font-size: 20px;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.2);
+  color: ${theme.colors.secondaryFont};
   margin-bottom: 20px;
 `;
 

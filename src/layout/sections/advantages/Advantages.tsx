@@ -25,7 +25,9 @@ export const Advantages = () => {
               skillNumber={"03"}
             />
           </FlexWrapper>
+
           <Photo src={photo} alt="проект ванной комнаты" />
+
           <FlexWrapper direction="column" gap="63px">
             <Advantage title={"Изделия из наличия"} skillNumber={"04"} />
             <Advantage title={"Работаем под ключ"} skillNumber={"05"} />
@@ -49,6 +51,14 @@ const StyledAdvantages = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  & ${FlexWrapper}~${FlexWrapper} {
+    text-align: right;
+
+    & ${FlexWrapper} {
+      flex-direction: row-reverse;
+    }
   }
 `;
 
