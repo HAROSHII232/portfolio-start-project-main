@@ -5,6 +5,7 @@ import { Pagination } from "../../../components/pagination/Pagination";
 import { Container } from "../../../components/Container";
 import backgroundImg from "../../../assets/images/header-background.webp";
 import { theme } from "../../../styles/Theme";
+import { Button } from "../../../components/Button";
 
 export const Promo = () => {
   return (
@@ -17,8 +18,8 @@ export const Promo = () => {
               Каменные изделия <span>для вашего дома</span>
             </MainTitle>
             <FlexWrapper>
-              <button>Рассчитать стоимость</button>
-              <button>Связаться с нами</button>
+              <Button>Рассчитать стоимость</Button>
+              <Button>Связаться с нами</Button>
             </FlexWrapper>
           </PromoInfo>
 
@@ -53,6 +54,24 @@ const StyledPromo = styled.section`
 
   & > ${Container} > ${FlexWrapper} {
     position: relative;
+  }
+
+  & ${Button} {
+    width: 288px;
+    height: 68px;
+  }
+
+  & ${Button}+${Button} {
+    margin-left: 22px;
+    background-color: #141414;
+  }
+
+  & ${Button}:hover {
+    background-color: #141414;
+  }
+
+  & ${Button}+${Button}:hover {
+    background-color: ${theme.colors.accent};
   }
 `;
 
@@ -96,6 +115,7 @@ const MainTitle = styled.h1`
   font-weight: 400;
   font-size: 50px;
   text-transform: uppercase;
+  margin-bottom:25px;
 
   span {
     color: #28553f;

@@ -26,19 +26,7 @@ export const Advantage = (props: AdvantagePropsType) => {
   );
 };
 
-const StyledAdvantage = styled.div`
-  /*   position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 317px;
-    height: 1px;
-    bottom: 23px;
-    left: 25px;
-    background-color: ${theme.colors.accent};
-  } */
-`;
+const StyledAdvantage = styled.div``;
 
 const Line = styled.span`
   background-color: ${theme.colors.accent};
