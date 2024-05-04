@@ -5,6 +5,7 @@ type IconPropsType = {
   width?: string;
   height?: string;
   viewBox?: string;
+  fill?: string;
 };
 
 export const Icon = (props: IconPropsType) => {
@@ -13,7 +14,7 @@ export const Icon = (props: IconPropsType) => {
       width={props.width || "20px"}
       height={props.height || "20px"}
       viewBox={props.viewBox || "0 0 50 50"}
-      fill="none"
+      fill={props.fill || "none"}
       xmlns="http://www.w3.org/2000/svg"
     >
       <use xlinkHref={`${iconsSprite}#${props.iconId}`} />

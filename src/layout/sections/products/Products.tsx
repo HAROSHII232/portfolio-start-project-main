@@ -9,6 +9,8 @@ import panelImg from "../../../assets/images/proj-4.webp";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 import { Icon } from "../../../components/icon/Icon";
+import { Button } from "../../../components/Button";
+import { LeftArrow, RightArrow } from "../promo/Promo";
 
 export const Products = () => {
   return (
@@ -18,9 +20,25 @@ export const Products = () => {
           Изделия из <span> натурального камня </span>
         </SectionTitle>
         <FlexWrapper direction={"column"} align={"flex-end"}>
-          <FlexWrapper>
-            <button></button>
-            <button></button>
+          <FlexWrapper gap="6px">
+            <LeftArrow>
+              <Icon
+                iconId={"arrow-left"}
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                fill="#b1b1b1"
+              />
+            </LeftArrow>
+            <RightArrow>
+              <Icon
+                iconId={"arrow-right"}
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                fill="#b1b1b1"
+              />
+            </RightArrow>
           </FlexWrapper>
           <SeeAll>
             Смотреть все
@@ -43,7 +61,13 @@ export const Products = () => {
   );
 };
 
-const StyledProducts = styled.section``;
+const StyledProducts = styled.section`
+  button {
+    border: 1px solid #b1b1b1;
+    border-radius: 4px;
+    background-color: unset;
+  }
+`;
 
 const SeeAll = styled.span`
   font-weight: 400;
@@ -55,4 +79,5 @@ const SeeAll = styled.span`
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 `;

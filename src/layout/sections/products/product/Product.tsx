@@ -7,7 +7,7 @@ type ProductPropsType = {
 
 export const Product = (props: ProductPropsType) => {
   return (
-    <StyledProduct>
+    <StyledProduct href="#">
       <Image src={props.src} alt="" />
       <Title>{props.title}</Title>
     </StyledProduct>

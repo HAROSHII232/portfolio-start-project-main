@@ -32,6 +32,7 @@ export const Promo = () => {
                   width="17"
                   height="17"
                   viewBox="0 0 17 17"
+                  fill="white"
                 />
               </LeftArrow>
               <RightArrow>
@@ -40,6 +41,7 @@ export const Promo = () => {
                   width="17"
                   height="17"
                   viewBox="0 0 17 17"
+                  fill="white"
                 />
               </RightArrow>
             </FlexWrapper>
@@ -154,7 +156,7 @@ const SmallText = styled.span`
   }
 `;
 
-const LeftArrow = styled.button`
+export const LeftArrow = styled.button`
   width: 45px;
   height: 45px;
   display: flex;
@@ -163,7 +165,7 @@ const LeftArrow = styled.button`
   border: 0.5px solid #fff;
 `;
 
-const RightArrow = styled(LeftArrow)`
+export const RightArrow = styled(LeftArrow)`
   background-color: ${theme.colors.accent};
   border: none;
 `;
