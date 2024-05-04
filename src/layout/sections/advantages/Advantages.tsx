@@ -46,6 +46,11 @@ const StyledAdvantages = styled.section`
   & ${SectionTitle} {
     text-align: center;
     margin-bottom: 50px;
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   & ${Container} {
     display: flex;

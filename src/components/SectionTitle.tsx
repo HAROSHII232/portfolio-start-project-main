@@ -21,8 +21,7 @@ export const SectionTitle = styled.h2`
     height: 1px;
     background-color: ${theme.colors.accent};
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     top: -10px;
   }
 `;
