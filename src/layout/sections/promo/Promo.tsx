@@ -6,6 +6,7 @@ import { Container } from "../../../components/Container";
 import backgroundImg from "../../../assets/images/header-background.webp";
 import { theme } from "../../../styles/Theme";
 import { Button } from "../../../components/Button";
+import { Icon } from "../../../components/icon/Icon";
 
 export const Promo = () => {
   return (
@@ -17,16 +18,30 @@ export const Promo = () => {
             <MainTitle>
               Каменные изделия <span>для вашего дома</span>
             </MainTitle>
-            <FlexWrapper>
+            <FlexWrapper gap="22px">
               <Button>Рассчитать стоимость</Button>
               <Button>Связаться с нами</Button>
             </FlexWrapper>
           </PromoInfo>
 
-          <FlexWrapper direction="column" justify="flex-end">
-            <FlexWrapper>
-              <LeftArrow></LeftArrow>
-              <RightArrow></RightArrow>
+          <FlexWrapper direction="column" justify="flex-end" gap="66px">
+            <FlexWrapper gap="7px">
+              <LeftArrow>
+                <Icon
+                  iconId={"arrow-left"}
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                />
+              </LeftArrow>
+              <RightArrow>
+                <Icon
+                  iconId={"arrow-right"}
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                />
+              </RightArrow>
             </FlexWrapper>
 
             <Pagination />
@@ -62,7 +77,6 @@ const StyledPromo = styled.section`
   }
 
   & ${Button}+${Button} {
-    margin-left: 22px;
     background-color: #141414;
   }
 
@@ -77,7 +91,7 @@ const StyledPromo = styled.section`
 
 const PromoInfo = styled.div`
   position: absolute;
-  top: 150px;
+  top: 110px;
   left: -100px;
   z-index: 1;
 
@@ -115,7 +129,7 @@ const MainTitle = styled.h1`
   font-weight: 400;
   font-size: 50px;
   text-transform: uppercase;
-  margin-bottom:25px;
+  margin-bottom: 25px;
 
   span {
     color: #28553f;
@@ -143,6 +157,13 @@ const SmallText = styled.span`
 const LeftArrow = styled.button`
   width: 45px;
   height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid #fff;
 `;
 
-const RightArrow = styled(LeftArrow)``;
+const RightArrow = styled(LeftArrow)`
+  background-color: ${theme.colors.accent};
+  border: none;
+`;
