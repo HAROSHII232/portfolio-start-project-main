@@ -9,8 +9,8 @@ import panelImg from "../../../assets/images/proj-4.webp";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 import { Icon } from "../../../components/icon/Icon";
-import { Button } from "../../../components/Button";
 import { LeftArrow, RightArrow } from "../promo/Promo";
+import { SeeAll } from "../../../components/SeeAll";
 
 export const Products = () => {
   return (
@@ -40,15 +40,7 @@ export const Products = () => {
               />
             </RightArrow>
           </FlexWrapper>
-          <SeeAll>
-            Смотреть все
-            <Icon
-              iconId={"arrow-see-all"}
-              width="36"
-              height="9"
-              viewBox="0 0 36 9"
-            />
-          </SeeAll>
+          <SeeAll />
         </FlexWrapper>
         <FlexWrapper wrap={"wrap"} gap={"10px"}>
           <Product title={"столешницы"} src={tabletopImg} />
@@ -67,17 +59,4 @@ const StyledProducts = styled.section`
     border-radius: 4px;
     background-color: unset;
   }
-`;
-
-const SeeAll = styled.span`
-  font-weight: 400;
-  font-size: 21px;
-  text-transform: uppercase;
-  color: ${theme.colors.secondaryFont};
-
-  margin: 58px 0px 41px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
 `;

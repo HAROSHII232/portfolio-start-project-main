@@ -24,7 +24,7 @@ export const Promo = () => {
             </FlexWrapper>
           </PromoInfo>
 
-          <FlexWrapper direction="column" justify="flex-end" gap="66px">
+          <FlexWrapper direction="column" justify="flex-end">
             <FlexWrapper gap="7px">
               <LeftArrow>
                 <Icon

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FlexWrapper } from "../FlexWrapper";
 
 export const Pagination = () => {
   return (
@@ -15,6 +14,7 @@ export const Pagination = () => {
 const StyledPagination = styled.div`
   display: flex;
   gap: 18px;
+  margin-top:65px;
 `;
 
 const Dot = styled.div`
