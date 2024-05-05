@@ -7,7 +7,6 @@ import sillImg from "../../../assets/images/proj-2.webp";
 import sinksImg from "../../../assets/images/proj-3.webp";
 import panelImg from "../../../assets/images/proj-4.webp";
 import { Container } from "../../../components/Container";
-import { theme } from "../../../styles/Theme";
 import { Icon } from "../../../components/icon/Icon";
 import { LeftArrow, RightArrow } from "../promo/Promo";
 import { SeeAll } from "../../../components/SeeAll";
@@ -58,5 +57,6 @@ const StyledProducts = styled.section`
     border: 1px solid #b1b1b1;
     border-radius: 4px;
     background-color: unset;
+    margin-top: -45px
   }
 `;

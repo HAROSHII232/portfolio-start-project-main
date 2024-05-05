@@ -1,15 +1,11 @@
 import styled from "styled-components";
 import { Icon } from "./icon/Icon";
 
-type SeeAllPropsType = {
-  color?: string;
-};
-
-export const SeeAll = (props:SeeAllPropsType) => {
+export const SeeAll = () => {
   return (
     <SeeAllStyled>
       Смотреть все
-      <Icon iconId={"arrow-see-all"} width="36" height="9" viewBox="0 0 36 9" />
+      <Icon iconId={"arrow-see-all"} width="36" height="9" viewBox="0 0 36 9" fill="#282a30" />
     </SeeAllStyled>
   );
 };
