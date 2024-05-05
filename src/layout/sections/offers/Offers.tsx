@@ -75,7 +75,6 @@ const StyledOffer = styled.section`
       url(${backgroundImg});
     background-size: cover;
     background-position: center center;
-    max-width: 1440px;
     padding-top: 57px;
     padding-bottom: 50px;
   }
@@ -100,7 +99,7 @@ const OffersInfo = styled.div`
     rgba(0, 0, 0, 0.87) 0%,
     rgba(0, 0, 0, 0.87) 100%
   );
-  margin-left: -15px;
+  margin-left: -100px;
   position: relative;
   z-index: 0;
 
@@ -116,7 +115,7 @@ const OffersInfo = styled.div`
   &::before {
     content: "";
     position: absolute;
-    left: -5px;
+    left: 0px;
     top: -20px;
     z-index: -1;
 
