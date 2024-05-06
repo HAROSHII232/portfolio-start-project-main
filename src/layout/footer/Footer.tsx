@@ -80,7 +80,7 @@ export const Footer = () => {
           </Contact>
         </FlexWrapper>
         <Adress>674 Gonzales Drive. Washington, PA 15301</Adress>
-        <OnTopButton>
+        <OnTopButton href="#top">
           <Icon
             iconId={"arrow-up"}
             width="14"

@@ -27,7 +27,7 @@ export const Offers = () => {
           </OffersInfo>
           <FlexWrapper direction={"column"} align="center">
             <SeeAll />
-            <FlexWrapper wrap={"wrap"} gap="37px" justify="center">
+            <FlexWrapper wrap={"wrap"} gap="37px" justify="flex-end">
               <Offer
                 src={image}
                 brand={"Kratki"}
@@ -77,6 +77,17 @@ const StyledOffer = styled.section`
     background-position: center center;
     padding-top: 57px;
     padding-bottom: 50px;
+
+    a {
+      color:#fff;
+      align-self:flex-end;
+      margin-bottom: 20px;
+      margin-top:0;
+
+      &:hover{
+        opacity:.7
+      }
+    }
   }
 
   ${SectionTitle} {
