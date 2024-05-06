@@ -3,6 +3,7 @@ import { Button } from "../../../components/Button";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import SectionBackground from "../../../assets/images/footer-background.webp";
+import { theme } from "../../../styles/Theme";
 
 export const Contacts = () => {
   return (
@@ -72,6 +73,8 @@ const StyledForm = styled.form`
 `;
 
 const Field = styled.input`
+  font-family: "Raleway", sans-serif;
+  color: ${theme.colors.primaryFont};
   padding: 15px 20px;
   background-color: unset;
   border: 1px solid rgba(243, 243, 243, 0.7);

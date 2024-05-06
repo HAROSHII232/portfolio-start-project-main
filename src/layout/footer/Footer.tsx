@@ -80,6 +80,14 @@ export const Footer = () => {
           </Contact>
         </FlexWrapper>
         <Adress>674 Gonzales Drive. Washington, PA 15301</Adress>
+        <OnTopButton>
+          <Icon
+            iconId={"arrow-up"}
+            width="14"
+            height="24"
+            viewBox="0 0 14 24"
+          />
+        </OnTopButton>
       </Container>
     </StyledFooter>
   );
@@ -171,4 +179,23 @@ const Adress = styled.a`
   text-align: center;
   color: #fff;
   margin-top: 50px;
+`;
+
+const OnTopButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 59px;
+  height: 57px;
+  border-radius: 50%;
+  background-color: ${theme.colors.accent};
+  cursor: pointer;
+
+  position: absolute;
+  right: 40px;
+  top: 5px;
+
+  &:hover {
+    opacity: 0.6;
+  }
 `;
