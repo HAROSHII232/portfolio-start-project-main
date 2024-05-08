@@ -79,13 +79,13 @@ const StyledOffer = styled.section`
     padding-bottom: 50px;
 
     a {
-      color:#fff;
-      align-self:flex-end;
+      color: #fff;
+      align-self: flex-end;
       margin-bottom: 20px;
-      margin-top:0;
+      margin-top: 0;
 
-      &:hover{
-        opacity:.7
+      &:hover {
+        opacity: 0.7;
       }
     }
   }
