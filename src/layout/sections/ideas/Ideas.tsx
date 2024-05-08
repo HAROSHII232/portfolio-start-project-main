@@ -55,7 +55,13 @@ export const Ideas = () => {
 
           <Button as={"a"} href="#">
             Смотреть еще больше фотографий
-            <Icon iconId={"arrow-see-all"} width="36" height="9" viewBox="0 0 36 9" fill="white" />
+            <Icon
+              iconId={"arrow-see-all"}
+              width="36"
+              height="9"
+              viewBox="0 0 36 9"
+              fill="white"
+            />
           </Button>
         </FlexWrapper>
       </Container>
@@ -90,27 +96,41 @@ const StyledIdeas = styled.section`
 `;
 
 const ImageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 20px;
   margin-top: 65px;
-  height: 766px;
+
+  display: grid;
+  grid-template-columns: 499px 348px 348px;
+  grid-auto-rows: minmax(373px auto);
+  gap: 20px;
+  grid-template-areas:
+    "one two three"
+    "one four five";
 
   img:first-child {
-    height: 100%;
+    grid-area: one;
   }
 
-  img:not(:first-child) {
-    width: 348px;
-    height: 373px;
+  img:nth-child(2) {
+    grid-area: two;
+  }
+
+  img:nth-child(3) {
+    grid-area: three;
+  }
+
+  img:nth-child(4) {
+    grid-area: four;
+  }
+
+  img:nth-child(5) {
+    grid-area: five;
   }
 `;
 
 const Image = styled.img`
   box-shadow: 0 4px 47px -2px rgba(0, 0, 0, 0.25);
-  max-width: 500px;
-  height: 50%;
 
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 `;
