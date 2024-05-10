@@ -5,6 +5,7 @@ import headerLogo from "../../assets/images/logo-header.png";
 import { theme } from "../../styles/Theme";
 import { Container } from "../../components/Container";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
+import { MobileMenu } from "./mobileMenu/MobileMenu";
 
 const headerItems = [
   "Каталог",
@@ -49,6 +50,7 @@ export const Header = () => {
               />
             </FlexWrapper>
             <HeaderMenu menuItems={headerItems} />
+            <MobileMenu menuItems={headerItems} />
           </FlexWrapper>
         </FlexWrapper>
       </Container>
