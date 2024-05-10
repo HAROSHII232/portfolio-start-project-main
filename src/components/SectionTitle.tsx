@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { theme } from "../styles/Theme";
+import { font } from "../styles/Common";
 
 export const SectionTitle = styled.h2`
-  position: relative;
-  font-weight: 400;
-  font-size: 40px;
-  max-width: 527px;
+  ${font({ color: "#282A30", Fmax: 40, Fmin: 24 })}
   text-transform: uppercase;
+
+  position: relative;
+  max-width: 527px;
   text-align: left;
-  color: #282a30;
 
   & span {
     color: ${theme.colors.accent};

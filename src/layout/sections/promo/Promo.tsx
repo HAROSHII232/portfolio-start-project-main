@@ -7,6 +7,7 @@ import backgroundImg from "../../../assets/images/header-background.webp";
 import { theme } from "../../../styles/Theme";
 import { Button } from "../../../components/Button";
 import { Icon } from "../../../components/icon/Icon";
+import { font } from "../../../styles/Common";
 
 export const Promo = () => {
   return (
@@ -102,6 +103,14 @@ const PromoInfo = styled.div`
   padding: 67px 42px 58px 102px;
   max-width: 743px;
   background-color: ${theme.colors.secondaryBg};
+
+  @media screen and (max-width: 1430px) {
+    position: static;
+
+    & ${FlexWrapper} {
+      flex-direction: column;
+    }
+  }
 `;
 
 const PhotoWrapper = styled.div`
@@ -118,6 +127,10 @@ const PhotoWrapper = styled.div`
     border: 2px solid ${theme.colors.accent};
     width: 888px;
     height: 582px;
+
+    @media screen and (max-width: 1430px) {
+      display: none;
+    }
   }
 `;
 
@@ -125,16 +138,23 @@ const Photo = styled.img`
   width: 978px;
   height: 603px;
   object-fit: cover;
+
+  @media screen and (max-width: 1430px) {
+    display: none;
+  }
 `;
 
 const MainTitle = styled.h1`
-  font-weight: 400;
-  font-size: 50px;
+  ${font({ Fmax: 50, Fmin: 29 })}
   text-transform: uppercase;
   margin-bottom: 25px;
 
   span {
     color: #28553f;
+  }
+
+  @media ${theme.media.mobile} {
+    margin: 9px 0 25px;
   }
 `;
 
@@ -163,9 +183,17 @@ export const LeftArrow = styled.button`
   align-items: center;
   justify-content: center;
   border: 0.5px solid #fff;
+
+  @media screen and (max-width: 1430px) {
+    display: none;
+  }
 `;
 
 export const RightArrow = styled(LeftArrow)`
   background-color: ${theme.colors.accent};
   border: none;
+
+  @media screen and (max-width: 1430px) {
+    display: none;
+  }
 `;
