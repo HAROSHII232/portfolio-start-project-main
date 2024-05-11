@@ -21,7 +21,7 @@ export const Header = () => {
       <Container>
         <FlexWrapper justify="space-between">
           <Logo href="#">
-            <img src={headerLogo} alt="" />
+            <img src={headerLogo} alt="Логотип каменные изделия" />
           </Logo>
           <FlexWrapper
             direction="column"
@@ -65,8 +65,10 @@ const StyledHeader = styled.header`
 
 const Logo = styled.a`
   img {
-    width: 289px;
+    max-width: 289px;
     height: 115px;
+    width: 100%;
+    object-fit: contain;
   }
 `;
 

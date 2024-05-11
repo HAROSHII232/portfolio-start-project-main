@@ -20,10 +20,15 @@ const StyledProduct = styled.a`
   display: block;
   max-width: 740px;
   width: 100%;
+  flex-grow: 1;
 
   &:first-child,
   &:last-child {
-    max-width: 490px;
+    width: 490px;
+
+    @media screen and (max-width: 1439px) {
+      width: 100%;
+    }
   }
 
   &:nth-child(even) {
@@ -43,7 +48,8 @@ const Title = styled.h3`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 470px;
+  max-width: 470px;
+  width: 100%;
   height: 58px;
   background: linear-gradient(
     180deg,
@@ -59,6 +65,6 @@ const Title = styled.h3`
   color: #fff;
 
   position: absolute;
-  
+
   bottom: 20px;
 `;
