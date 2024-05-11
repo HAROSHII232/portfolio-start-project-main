@@ -61,6 +61,10 @@ export const Header = () => {
 const StyledHeader = styled.header`
   background-color: ${theme.colors.secondaryBg};
   padding: 20px 0;
+
+  @media ${theme.media.tablet} {
+    padding-top: 0px;
+  }
 `;
 
 const Logo = styled.a`
@@ -69,6 +73,11 @@ const Logo = styled.a`
     height: 115px;
     width: 100%;
     object-fit: contain;
+
+    @media ${theme.media.tablet} {
+      width: 93px;
+      height: 37px;
+    }
   }
 `;
 

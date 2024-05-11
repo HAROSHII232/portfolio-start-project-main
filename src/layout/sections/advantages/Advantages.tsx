@@ -65,11 +65,22 @@ const StyledAdvantages = styled.section`
       flex-direction: row-reverse;
     }
   }
+
+  @media screen and (max-width: 1300px) {
+    & ${SectionTitle}+${FlexWrapper} {
+      flex-direction:column
+    }
+  }
 `;
 
 const Photo = styled.img`
-  width: 369px;
+  max-width: 369px;
+  width: 100%;
   height: 587px;
   object-fit: cover;
   border: 7px solid ${theme.colors.accent};
+
+  @media screen and (max-width: 1300px) {
+    display: none;
+  }
 `;

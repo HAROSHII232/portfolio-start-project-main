@@ -90,6 +90,12 @@ const StyledPromo = styled.section`
   & ${Button}+${Button}:hover {
     background-color: ${theme.colors.accent};
   }
+
+  @media screen and (max-width: 980px) {
+    & > ${Container} > ${FlexWrapper} > ${FlexWrapper} > div + div {
+      display: none;
+    }
+  }
 `;
 
 const PromoInfo = styled.div`
@@ -110,6 +116,12 @@ const PromoInfo = styled.div`
     & ${FlexWrapper} {
       flex-direction: column;
     }
+  }
+
+  @media ${theme.media.tablet} {
+    padding: 0;
+    background-color: transparent;
+    width: 100px;
   }
 `;
 

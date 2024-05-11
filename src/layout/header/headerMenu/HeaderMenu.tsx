@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 
 type HeaderMenuPropsType = {
@@ -26,8 +26,9 @@ const StyledHeaderMenu = styled.nav`
     display: flex;
   }
 
-  @media ${theme.media.tablet} {
+  @media screen and (max-width: 970px) {
     display: none;
+    
   }
 `;
 

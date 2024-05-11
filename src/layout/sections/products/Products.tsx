@@ -39,7 +39,8 @@ export const Products = () => {
               />
             </RightArrow>
           </FlexWrapper>
-          <SeeAll />
+
+          <SeeAll margin={"20px"} />
         </FlexWrapper>
         <FlexWrapper wrap={"wrap"} gap={"10px"} justify="center">
           <Product title={"столешницы"} src={tabletopImg} />

@@ -99,8 +99,8 @@ const ImageWrapper = styled.div`
   margin-top: 65px;
 
   display: grid;
-  grid-template-columns: 499px 348px 348px;
-  grid-auto-rows: minmax(373px auto);
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-auto-rows: minmax(373px, auto);
   gap: 20px;
   grid-template-areas:
     "one two three"

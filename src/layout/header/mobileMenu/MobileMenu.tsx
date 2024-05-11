@@ -30,7 +30,7 @@ export const MobileMenu = (props: MobileMenuPropsType) => {
 const StyledMobileMenu = styled.nav`
   display: none;
 
-  @media ${theme.media.tablet} {
+  @media screen and (max-width: 970px) {
     display: block;
   }
 `;
@@ -63,9 +63,9 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 `;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
-  position: fixed;
-  top: 0;
-  right: 0;
+  position: absolute;
+  top: 37px;
+  right: 18px;
   z-index: 9999999;
 
   width: 40px;
