@@ -79,7 +79,7 @@ export const Footer = () => {
             </SocialList>
           </Contact>
         </FlexWrapper>
-        <Adress>674 Gonzales Drive. Washington, PA 15301</Adress>
+
         <OnTopButton href="#top">
           <Icon
             iconId={"arrow-up"}
@@ -89,6 +89,7 @@ export const Footer = () => {
           />
         </OnTopButton>
       </Container>
+      <Adress>674 Gonzales Drive. Washington, PA 15301</Adress>
     </StyledFooter>
   );
 };
@@ -100,24 +101,36 @@ const StyledFooter = styled.footer`
     padding-top: 40px;
     padding-bottom: 25px;
 
-    position: relative;
+    ${FlexWrapper} {
+      @media screen and (max-width: 972px) {
+        flex-direction: column;
+      }
+    }
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 225px;
-      width: 100%;
-      height: 1px;
-      background-color: #fff;
-      opacity: 0.15;
+    nav {
+      @media ${theme.media.tablet} {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media ${theme.media.mobile} {
+      padding-top: 30px;
+      padding-bottom: 0;
     }
   }
 `;
 
 const FooterLogo = styled.img`
-  width: 268px;
+  max-width: 268px;
+  width: 100%;
   height: 108px;
+
+  @media ${theme.media.mobile} {
+    width: 164px;
+    height: 66px;
+    margin-bottom: 15px;
+    align-self: center;
+  }
 `;
 
 const Contact = styled.div`
@@ -162,6 +175,16 @@ const SocialItem = styled.li`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  @media ${theme.media.tablet} {
+    width: 53px;
+    height: 53px;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
 `;
 
 const SocialLink = styled.a`
@@ -179,6 +202,24 @@ const Adress = styled.a`
   text-align: center;
   color: #fff;
   margin-top: 50px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -17px;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    opacity: 0.15;
+  }
+
+  @media ${theme.media.mobile} {
+    padding: 15px 50px 13px;
+    line-height: 1.2;
+  }
 `;
 
 const OnTopButton = styled.a`

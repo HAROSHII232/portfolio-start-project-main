@@ -57,7 +57,7 @@ const StyledContacts = styled.section`
     text-transform: uppercase;
   }
 
-  span:nth-child(2) {
+  span+span {
     margin-top: 10px;
   }
 
