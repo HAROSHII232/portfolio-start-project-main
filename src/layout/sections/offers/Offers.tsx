@@ -14,7 +14,7 @@ export const Offers = () => {
   return (
     <StyledOffer>
       <Container>
-        <FlexWrapper align="center" gap="35px">
+        <OffersContent>
           <OffersInfo>
             <SectionTitle>
               Актуальные акции на <span>НАШУ ПРОДУКЦИЮ</span>
@@ -25,7 +25,7 @@ export const Offers = () => {
             </OffersDescription>
             <Button>перейти в каталог</Button>
           </OffersInfo>
-          <FlexWrapper direction={"column"} align="center">
+          <OffersItemsWrapper>
             <SeeAll />
             <FlexWrapper wrap={"wrap"} gap="37px" justify="flex-end">
               <Offer
@@ -58,8 +58,8 @@ export const Offers = () => {
               />
             </FlexWrapper>
             <Pagination />
-          </FlexWrapper>
-        </FlexWrapper>
+          </OffersItemsWrapper>
+        </OffersContent>
       </Container>
     </StyledOffer>
   );
@@ -100,6 +100,16 @@ const StyledOffer = styled.section`
   }
 `;
 
+const OffersContent = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+`;
+
 const OffersInfo = styled.div`
   display: flex;
   flex-direction: column;
@@ -123,7 +133,7 @@ const OffersInfo = styled.div`
     }
   }
 
-  &::before {
+  /*   &::before {
     content: "";
     position: absolute;
     left: 0px;
@@ -133,6 +143,29 @@ const OffersInfo = styled.div`
     border: 2px solid ${theme.colors.accent};
     width: 600px;
     height: 440px;
+  } */
+`;
+
+const OffersItemsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & ${FlexWrapper} {
+    @media screen and (max-width: 1200px) {
+      justify-content: center;
+    }
+
+    @media ${theme.media.tablet} {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    & div:not(:first-child) {
+      @media ${theme.media.tablet} {
+        display: none;
+      }
+    }
   }
 `;
 

@@ -4,6 +4,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import SectionBackground from "../../../assets/images/footer-background.webp";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 export const Contacts = () => {
   return (
@@ -44,14 +45,28 @@ const StyledContacts = styled.section`
       ),
       url(${SectionBackground});
     background-size: cover;
+
+    @media ${theme.media.tablet} {
+      padding: 50px 23px 45px;
+      background-position-x: center;
+    }
   }
 
   span:not(:last-child) {
-    font-size: 28px;
+    ${font({ weight: 500, Fmax: 28, Fmin: 24 })}
     text-transform: uppercase;
   }
 
+  span:nth-child(2) {
+    margin-top: 10px;
+  }
+
+  span:last-child {
+    ${font({ color: "#f3f3f3", Fmax: 14, Fmin: 13 })}
+  }
+
   p {
+    ${font({ Fmax: 18, Fmin: 17 })}
     margin: 15px 0 29px;
   }
 `;
@@ -69,6 +84,14 @@ const StyledForm = styled.form`
     color: black;
     background-color: white;
     text-transform: none;
+
+    @media ${theme.media.tablet} {
+      width: 100%;
+    }
+  }
+
+  @media ${theme.media.tablet} {
+    flex-direction: column;
   }
 `;
 
@@ -91,4 +114,5 @@ const StyledCheckbox = styled.input``;
 
 const UnderlinedText = styled.span`
   text-decoration: underline;
+  text-decoration-skip-ink: none;
 `;
