@@ -12,6 +12,7 @@ import { Icon } from "../../../components/icon/Icon";
 import { LeftArrow, RightArrow } from "../promo/Promo";
 import { Button } from "../../../components/Button";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 export const Ideas = () => {
   return (
@@ -79,10 +80,10 @@ const StyledIdeas = styled.section`
   ${Button} {
     background-color: ${theme.colors.accent};
 
-    width: 405px;
     height: 52px;
+    padding: 0 20px;
     align-self: flex-end;
-    font-size: 18px;
+    ${font({ Fmax: 18, Fmin: 15 })}
 
     text-transform: none;
     display: flex;
@@ -91,12 +92,28 @@ const StyledIdeas = styled.section`
 
     svg {
       margin-left: 10px;
+
+      @media ${theme.media.tablet} {
+        width: 26px;
+      }
     }
+
+    @media ${theme.media.tablet} {
+      padding: 0 15px;
+      margin-top: 25px;
+
+      align-self: center;
+    }
+  }
+  
+  @media ${theme.media.tablet} {
+    padding-top: 0;
   }
 `;
 
 const ImageWrapper = styled.div`
   margin-top: 65px;
+  overflow: hidden;
 
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
@@ -124,6 +141,16 @@ const ImageWrapper = styled.div`
 
   img:nth-child(5) {
     grid-area: five;
+  }
+
+  @media ${theme.media.tablet} {
+    max-width: 323px;
+    margin-top: 40px;
+    align-items: center;
+    grid-template-columns: repeat(5, 323px);
+    grid-template-rows: 290px;
+
+    grid-template-areas: "two three four five one";
   }
 `;
 

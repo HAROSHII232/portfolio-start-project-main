@@ -79,7 +79,6 @@ export const Footer = () => {
             </SocialList>
           </Contact>
         </FlexWrapper>
-
         <OnTopButton href="#top">
           <Icon
             iconId={"arrow-up"}
@@ -100,6 +99,7 @@ const StyledFooter = styled.footer`
   ${Container} {
     padding-top: 40px;
     padding-bottom: 25px;
+    position: relative;
 
     ${FlexWrapper} {
       @media screen and (max-width: 972px) {
@@ -238,5 +238,9 @@ const OnTopButton = styled.a`
 
   &:hover {
     opacity: 0.6;
+  }
+
+  @media ${theme.media.tablet} {
+    display: none;
   }
 `;

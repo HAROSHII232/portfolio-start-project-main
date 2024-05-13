@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 export const Pagination = () => {
   return (
@@ -14,7 +15,11 @@ export const Pagination = () => {
 const StyledPagination = styled.div`
   display: flex;
   gap: 18px;
-  margin-top:65px;
+  margin-top: 65px;
+
+  @media ${theme.media.tablet} {
+    margin-top: 30px;
+  }
 `;
 
 const Dot = styled.div`
