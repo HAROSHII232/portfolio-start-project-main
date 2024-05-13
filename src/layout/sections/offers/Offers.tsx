@@ -6,9 +6,10 @@ import image from "../../../assets/images/offer-item.webp";
 import backgroundImg from "../../../assets/images/offer-background.webp";
 import { Pagination } from "../../../components/pagination/Pagination";
 import { Container } from "../../../components/Container";
-import { Button } from "../../../components/Button";
+import { Button, LeftArrow, RightArrow } from "../../../components/Button";
 import { theme } from "../../../styles/Theme";
 import { SeeAll } from "../../../components/SeeAll";
+import { Icon } from "../../../components/icon/Icon";
 
 export const Offers = () => {
   return (
@@ -57,6 +58,24 @@ export const Offers = () => {
                 oldPrice={"16 490 ₽"}
               />
             </FlexWrapper>
+            <LeftArrow>
+              <Icon
+                iconId={"arrow-left"}
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                fill="#b1b1b1"
+              />
+            </LeftArrow>
+            <RightArrow>
+              <Icon
+                iconId={"arrow-right"}
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                fill="#b1b1b1"
+              />
+            </RightArrow>
             <Pagination />
           </OffersItemsWrapper>
         </OffersContent>
@@ -131,6 +150,16 @@ const OffersInfo = styled.div`
     &:hover {
       background-color: ${theme.colors.secondaryFont};
     }
+
+    @media ${theme.media.mobile} {
+      width: 100%;
+    }
+  }
+
+  @media ${theme.media.mobile} {
+    padding: 43px 21px 33px;
+    margin: 0;
+    position: absolute;
   }
 
   /*   &::before {
@@ -147,11 +176,12 @@ const OffersInfo = styled.div`
 `;
 
 const OffersItemsWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  & ${FlexWrapper} {
+  ${FlexWrapper} {
     @media screen and (max-width: 1200px) {
       justify-content: center;
     }
@@ -159,16 +189,44 @@ const OffersItemsWrapper = styled.div`
     @media ${theme.media.tablet} {
       flex-direction: row;
       flex-wrap: nowrap;
+      overflow: hidden;
+      max-width: 282px;
+      justify-content: flex-start;
     }
+  }
 
-    & div:not(:first-child) {
-      @media ${theme.media.tablet} {
-        display: none;
-      }
+  ${LeftArrow}, ${RightArrow} {
+    display: none;
+    position: absolute;
+    top: 47%;
+    z-index: 1;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+
+    background-color: #f9f9f9;
+
+    @media ${theme.media.mobile} {
+      display: block;
     }
+  }
+
+  ${LeftArrow} {
+    left: -22.5px;
+  }
+
+  ${RightArrow} {
+    right: -22.5px;
+  }
+
+  @media ${theme.media.mobile} {
+    margin-top: 370px;
   }
 `;
 
 const OffersDescription = styled.p`
   margin: 35px 0;
+
+  @media ${theme.media.mobile} {
+    margin: 15px 0 31px;
+  }
 `;

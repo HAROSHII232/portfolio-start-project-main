@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { theme } from "../../../../styles/Theme";
 import { Button } from "../../../../components/Button";
-import { Icon } from "../../../../components/icon/Icon";
 
 type OfferPropsType = {
   src: string;
@@ -15,19 +13,21 @@ type OfferPropsType = {
 export const Offer = (props: OfferPropsType) => {
   return (
     <StyledOffer>
-      <Image src={props.src} alt="" />
+      <SmallText>Акция</SmallText>
+      <Image src={props.src} alt="Акционное предложение" />
       <Brand>{props.brand}</Brand>
       <Title>{props.name}</Title>
-      <FlexWrapper justify="space-between">
+      <PriceWrapper>
         <NewPrice>{props.newPrice}</NewPrice>
         <OldPrice>{props.oldPrice}</OldPrice>
-      </FlexWrapper>
+      </PriceWrapper>
       <Button>Подробнее</Button>
     </StyledOffer>
   );
 };
 
 const StyledOffer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   border: 1px solid #fff;
@@ -46,6 +46,16 @@ const StyledOffer = styled.div`
   }
 `;
 
+const SmallText = styled.div`
+  position: absolute;
+  right: 15px;
+  padding: 7px 18px;
+  font-weight: 300;
+  font-size: 17px;
+  color: #000;
+  background: rgba(255, 255, 255, 0.45);
+`;
+
 const Image = styled.img`
   width: 247px;
   height: 220px;
@@ -60,6 +70,11 @@ const Brand = styled.span`
 `;
 
 const Title = styled.span``;
+
+const PriceWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
 const NewPrice = styled.span`
   font-weight: 700;

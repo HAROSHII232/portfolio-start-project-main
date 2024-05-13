@@ -177,24 +177,28 @@ const ImageWrapper = styled.div`
   img:nth-child(5) {
     grid-area: five;
   }
-  ${LeftArrow} {
-    left: 0;
-  }
 
-  ${RightArrow} {
-    right: 0;
-  }
   ${LeftArrow}, ${RightArrow} {
     display: none;
     position: absolute;
     top: 55%;
     z-index: 1;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
 
     background-color: #f9f9f9;
 
     @media ${theme.media.mobile} {
       display: block;
     }
+  }
+
+  ${LeftArrow} {
+    left: 0;
+  }
+
+  ${RightArrow} {
+    right: 0;
   }
 
   @media ${theme.media.tablet} {
