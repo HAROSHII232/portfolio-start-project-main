@@ -5,7 +5,7 @@ import { Pagination } from "../../../components/pagination/Pagination";
 import { Container } from "../../../components/Container";
 import backgroundImg from "../../../assets/images/header-background.webp";
 import { theme } from "../../../styles/Theme";
-import { Button } from "../../../components/Button";
+import { Button, LeftArrow, RightArrow } from "../../../components/Button";
 import { Icon } from "../../../components/icon/Icon";
 import { font } from "../../../styles/Common";
 
@@ -93,6 +93,12 @@ const StyledPromo = styled.section`
 
   @media screen and (max-width: 980px) {
     & > ${Container} > ${FlexWrapper} > ${FlexWrapper} > div + div {
+      display: none;
+    }
+  }
+
+  ${LeftArrow}, ${RightArrow} {
+    @media screen and (max-width: 1390px) {
       display: none;
     }
   }
@@ -187,25 +193,5 @@ const SmallText = styled.span`
     background-color: #9c9c9c;
   }
 `;
+export { LeftArrow, RightArrow };
 
-export const LeftArrow = styled.button`
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 0.5px solid #fff;
-
-  @media screen and (max-width: 1430px) {
-    display: none;
-  }
-`;
-
-export const RightArrow = styled(LeftArrow)`
-  background-color: ${theme.colors.accent};
-  border: none;
-
-  @media screen and (max-width: 1430px) {
-    display: none;
-  }
-`;

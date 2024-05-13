@@ -8,8 +8,8 @@ import sinksImg from "../../../assets/images/proj-3.webp";
 import panelImg from "../../../assets/images/proj-4.webp";
 import { Container } from "../../../components/Container";
 import { Icon } from "../../../components/icon/Icon";
-import { LeftArrow, RightArrow } from "../promo/Promo";
 import { SeeAll } from "../../../components/SeeAll";
+import { LeftArrow, RightArrow } from "../../../components/Button";
 
 export const Products = () => {
   return (

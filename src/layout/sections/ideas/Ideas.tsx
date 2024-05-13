@@ -9,10 +9,9 @@ import idea5 from "../../../assets/images/header-background.webp";
 import { Pagination } from "../../../components/pagination/Pagination";
 import { Container } from "../../../components/Container";
 import { Icon } from "../../../components/icon/Icon";
-import { LeftArrow, RightArrow } from "../promo/Promo";
-import { Button } from "../../../components/Button";
 import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/Common";
+import { LeftArrow, RightArrow, Button } from "../../../components/Button";
 
 export const Ideas = () => {
   return (
@@ -22,7 +21,7 @@ export const Ideas = () => {
           <SectionTitle>
             идеи для <span>вдохновения</span>
           </SectionTitle>
-          <FlexWrapper gap="6px">
+          <ArrowWrapper>
             <LeftArrow>
               <Icon
                 iconId={"arrow-left"}
@@ -41,7 +40,7 @@ export const Ideas = () => {
                 fill="#b1b1b1"
               />
             </RightArrow>
-          </FlexWrapper>
+          </ArrowWrapper>
         </FlexWrapper>
 
         <ImageWrapper>
@@ -50,6 +49,24 @@ export const Ideas = () => {
           <Image src={idea3} />
           <Image src={idea4} />
           <Image src={idea5} />
+          <LeftArrow>
+            <Icon
+              iconId={"arrow-left"}
+              width="17"
+              height="17"
+              viewBox="0 0 17 17"
+              fill="#b1b1b1"
+            />
+          </LeftArrow>
+          <RightArrow>
+            <Icon
+              iconId={"arrow-right"}
+              width="17"
+              height="17"
+              viewBox="0 0 17 17"
+              fill="#b1b1b1"
+            />
+          </RightArrow>
         </ImageWrapper>
         <FlexWrapper direction="column" align="center">
           <Pagination />
@@ -105,13 +122,31 @@ const StyledIdeas = styled.section`
       align-self: center;
     }
   }
-  
+
   @media ${theme.media.tablet} {
     padding-top: 0;
+
+    ${SectionTitle} {
+      padding-right: 5px;
+
+      span {
+        color: ${theme.colors.secondaryFont};
+      }
+    }
+  }
+`;
+
+const ArrowWrapper = styled.div`
+  display: flex;
+  gap: 6px;
+
+  @media ${theme.media.mobile} {
+    display: none;
   }
 `;
 
 const ImageWrapper = styled.div`
+  position: relative;
   margin-top: 65px;
   overflow: hidden;
 
@@ -141,6 +176,25 @@ const ImageWrapper = styled.div`
 
   img:nth-child(5) {
     grid-area: five;
+  }
+  ${LeftArrow} {
+    left: 0;
+  }
+
+  ${RightArrow} {
+    right: 0;
+  }
+  ${LeftArrow}, ${RightArrow} {
+    display: none;
+    position: absolute;
+    top: 55%;
+    z-index: 1;
+
+    background-color: #f9f9f9;
+
+    @media ${theme.media.mobile} {
+      display: block;
+    }
   }
 
   @media ${theme.media.tablet} {
