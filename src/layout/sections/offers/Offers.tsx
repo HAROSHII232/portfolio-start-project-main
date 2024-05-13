@@ -117,6 +117,10 @@ const StyledOffer = styled.section`
       background-color: #fff;
     }
   }
+
+  @media ${theme.media.mobile} {
+    padding: 0;
+  }
 `;
 
 const OffersContent = styled.div`

@@ -10,6 +10,7 @@ import { Container } from "../../../components/Container";
 import { Icon } from "../../../components/icon/Icon";
 import { SeeAll } from "../../../components/SeeAll";
 import { LeftArrow, RightArrow } from "../../../components/Button";
+import { theme } from "../../../styles/Theme";
 
 export const Products = () => {
   return (
@@ -59,5 +60,12 @@ const StyledProducts = styled.section`
     border-radius: 4px;
     background-color: unset;
     margin-top: -45px;
+
+    @media ${theme.media.tablet} {
+      display: none;
+    }
+  }
+  @media ${theme.media.mobile} {
+    padding: 35px 0px;
   }
 `;

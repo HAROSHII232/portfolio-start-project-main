@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { theme } from "../../../../styles/Theme";
+import { font } from "../../../../styles/Common";
 
 type ProductPropsType = {
   title: string;
@@ -42,6 +44,13 @@ const Image = styled.img`
   width: 100%;
   height: 340px;
   object-fit: cover;
+  border-radius: 4px;
+
+  box-shadow: 0 4px 47px -2px rgba(0, 0, 0, 0.25);
+
+  @media ${theme.media.mobile} {
+    height: 220px;
+  }
 `;
 
 const Title = styled.h3`
@@ -57,13 +66,16 @@ const Title = styled.h3`
     rgba(0, 0, 0, 0.87) 100%
   );
 
-  font-weight: 500;
-  font-size: 24px;
+  ${font({
+    weight: 500,
+    color: `${theme.colors.primaryFont}`,
+    Fmax: 24,
+    Fmin: 22,
+  })}
+
   line-height: 150%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #fff;
-
   position: absolute;
 
   bottom: 20px;
