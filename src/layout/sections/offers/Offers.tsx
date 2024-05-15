@@ -10,6 +10,7 @@ import { Button, LeftArrow, RightArrow } from "../../../components/Button";
 import { theme } from "../../../styles/Theme";
 import { SeeAll } from "../../../components/SeeAll";
 import { Icon } from "../../../components/icon/Icon";
+import { font } from "../../../styles/Common";
 
 export const Offers = () => {
   return (
@@ -112,6 +113,7 @@ const StyledOffer = styled.section`
   ${SectionTitle} {
     font-weight: 500;
     color: #fff;
+    padding-right: 35px;
 
     &::before {
       background-color: #fff;
@@ -136,8 +138,8 @@ const OffersContent = styled.div`
 const OffersInfo = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 61px 58px 47px 103px;
-  max-width: 650px;
+  padding: 61px 50px 47px 103px;
+  max-width: 703px;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.87) 0%,
@@ -228,7 +230,9 @@ const OffersItemsWrapper = styled.div`
 `;
 
 const OffersDescription = styled.p`
-  margin: 35px 0;
+  ${font({ Fmax: 22, Fmin: 17 })}
+
+  margin: 47px 0 35px;
 
   @media ${theme.media.mobile} {
     margin: 15px 0 31px;
