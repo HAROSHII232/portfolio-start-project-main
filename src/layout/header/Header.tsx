@@ -75,7 +75,7 @@ const StyledHeader = styled.header`
 
 const Logo = styled.a`
   img {
-    max-width: 289px;
+    max-width: 246px;
     height: 115px;
     width: 100%;
     object-fit: contain;
@@ -89,7 +89,7 @@ const Logo = styled.a`
 
 const IconsWrapper = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 18px;
   flex-wrap: wrap;
 
   @media ${theme.media.mobile} {

@@ -24,25 +24,25 @@ export const HeaderMenu = (props: HeaderMenuPropsType) => {
 const StyledHeaderMenu = styled.nav`
   ul {
     display: flex;
+    gap: 90px;
   }
 
   @media screen and (max-width: 970px) {
     display: none;
-    
   }
 `;
 
 const ListItem = styled.li`
   position: relative;
-  padding: 14px 38px;
   cursor: pointer;
+  padding-bottom:36px;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0px;
-    right: 0px;
+    bottom: 20px;
+    left: -38px;
+    right: -38px;
     display: inline-block;
     height: 2px;
     background-color: ${theme.colors.primaryFont};
