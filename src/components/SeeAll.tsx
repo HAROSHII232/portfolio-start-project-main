@@ -1,25 +1,27 @@
 import styled from "styled-components";
 import { Icon } from "./icon/Icon";
 
-
-type SeeAllProps = {
-  margin?:string
-}
-export const SeeAll = ({margin}:SeeAllProps) => {
+export const SeeAll = () => {
   return (
-    <SeeAllStyled margin={margin}>
+    <SeeAllStyled>
       Смотреть все
-      <Icon iconId={"arrow-see-all"} width="36" height="9" viewBox="0 0 36 9" fill="#282a30" />
+      <Icon
+        iconId={"arrow-see-all"}
+        width="36"
+        height="9"
+        viewBox="0 0 36 9"
+        fill="#282a30"
+      />
     </SeeAllStyled>
   );
 };
 
-const SeeAllStyled = styled.a<any>`
+const SeeAllStyled = styled.a`
   font-weight: 400;
   font-size: 21px;
   text-transform: uppercase;
   color: #282a30;
-  margin: ${(props) => props.margin || "58px 0px 41px"};
+  margin: 59px 0 40px;
   display: flex;
   align-items: center;
   justify-content: flex-end;

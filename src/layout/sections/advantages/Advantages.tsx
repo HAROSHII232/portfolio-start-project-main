@@ -20,15 +20,12 @@ export const Advantages = () => {
               skillNumber={"01"}
             />
             <Advantage title={"Собственное произодство"} skillNumber={"02"} />
-            <Advantage
-              title={"Широкий ассортимент разнообразных камней"}
-              skillNumber={"03"}
-            />
+            <Advantage title={"Широкий ассортимент"} skillNumber={"03"} />
           </FlexWrapper>
 
           <Photo src={photo} alt="проект ванной комнаты" />
 
-          <FlexWrapper direction="column" gap="63px">
+          <FlexWrapper direction="column" gap="60px">
             <Advantage title={"Изделия из наличия"} skillNumber={"04"} />
             <Advantage title={"Работаем под ключ"} skillNumber={"05"} />
             <Advantage
@@ -66,9 +63,13 @@ const StyledAdvantages = styled.section`
     }
   }
 
+  & > ${FlexWrapper} >${FlexWrapper} > div:nth-child(2) h3{
+    color: red;
+  }
+
   @media screen and (max-width: 1300px) {
     & ${SectionTitle}+${FlexWrapper} {
-      flex-direction:column
+      flex-direction: column;
     }
   }
 `;
@@ -78,6 +79,7 @@ const Photo = styled.img`
   width: 100%;
   height: 587px;
   object-fit: cover;
+  object-position: left center;
   border: 7px solid ${theme.colors.accent};
 
   @media screen and (max-width: 1300px) {

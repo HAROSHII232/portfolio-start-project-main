@@ -41,7 +41,7 @@ export const Products = () => {
             </RightArrow>
           </FlexWrapper>
 
-          <SeeAll margin={"20px"} />
+          <SeeAll />
         </FlexWrapper>
         <FlexWrapper wrap={"wrap"} gap={"10px"} justify="center">
           <Product title={"столешницы"} src={tabletopImg} />
@@ -55,6 +55,10 @@ export const Products = () => {
 };
 
 const StyledProducts = styled.section`
+
+  padding-bottom: 41px;
+
+
   button {
     border: 1px solid #b1b1b1;
     border-radius: 4px;
@@ -65,6 +69,9 @@ const StyledProducts = styled.section`
       display: none;
     }
   }
+
+
+
   @media ${theme.media.mobile} {
     padding: 35px 0px;
   }

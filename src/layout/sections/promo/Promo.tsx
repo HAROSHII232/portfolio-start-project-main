@@ -60,7 +60,7 @@ export const Promo = () => {
 };
 
 const StyledPromo = styled.section`
-  padding: 0px 0px 60px;
+  padding: 0px 0px 65px;
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.93) 0%,
