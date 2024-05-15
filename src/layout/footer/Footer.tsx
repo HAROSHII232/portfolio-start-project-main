@@ -95,6 +95,7 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
   background-color: ${theme.colors.secondaryBg};
+  padding-bottom: 25px;
 
   ${Container} {
     padding-top: 40px;
@@ -123,7 +124,7 @@ const StyledFooter = styled.footer`
 const FooterLogo = styled.img`
   max-width: 268px;
   width: 100%;
-  height: 108px;
+  height: 126px;
 
   @media ${theme.media.mobile} {
     width: 164px;
@@ -162,7 +163,7 @@ const Email = styled.a`
 
 const SocialList = styled.ul`
   display: flex;
-  margin-top: 24px;
+  margin-top: 33px;
   gap: 12px;
 `;
 
@@ -201,7 +202,7 @@ const Adress = styled.a`
   line-height: 175%;
   text-align: center;
   color: #fff;
-  margin-top: 50px;
+  margin-top: 25px;
 
   position: relative;
 

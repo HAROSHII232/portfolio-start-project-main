@@ -46,8 +46,8 @@ export const Ideas = () => {
         <ImageWrapper>
           <Image src={idea1} />
           <Image src={idea2} />
-          <Image src={idea3} />
           <Image src={idea4} />
+          <Image src={idea3} />
           <Image src={idea5} />
           <LeftArrow>
             <Icon
@@ -88,6 +88,7 @@ export const Ideas = () => {
 };
 
 const StyledIdeas = styled.section`
+  padding-bottom: 100px;
   button {
     border: 1px solid #b1b1b1;
     border-radius: 4px;
@@ -98,7 +99,8 @@ const StyledIdeas = styled.section`
     background-color: ${theme.colors.accent};
 
     height: 52px;
-    padding: 0 20px;
+    padding: 0 33px;
+    margin-top: 15px;
     align-self: flex-end;
     ${font({ Fmax: 18, Fmin: 15 })}
 
@@ -149,6 +151,7 @@ const ImageWrapper = styled.div`
   position: relative;
   margin-top: 65px;
   overflow: hidden;
+  max-height: 766px;
 
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;

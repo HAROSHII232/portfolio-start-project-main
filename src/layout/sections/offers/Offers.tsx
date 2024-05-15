@@ -86,6 +86,7 @@ export const Offers = () => {
 };
 
 const StyledOffer = styled.section`
+  padding-bottom: 0px;
   ${Container} {
     background: linear-gradient(
         90deg,

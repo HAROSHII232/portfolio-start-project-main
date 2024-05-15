@@ -101,6 +101,7 @@ const Field = styled.input`
   padding: 15px 20px;
   background-color: unset;
   border: 1px solid rgba(243, 243, 243, 0.7);
+  width: 240px;
 
   &::placeholder {
     font-weight: 400;
