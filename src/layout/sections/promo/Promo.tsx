@@ -72,11 +72,19 @@ const StyledPromo = styled.section`
 
   & > ${Container} > ${FlexWrapper} {
     position: relative;
+
+    @media ${theme.media.mobile}{
+      gap: 0;
+    }
   }
 
   & ${Button} {
     width: 288px;
     height: 68px;
+
+    @media ${theme.media.mobile} {
+      width: 100%;
+    }
   }
 
   & ${Button}+${Button} {
@@ -128,6 +136,11 @@ const PromoInfo = styled.div`
     padding: 0;
     background-color: transparent;
     width: 100px;
+  }
+
+  @media ${theme.media.mobile} {
+    width: 100%;
+
   }
 `;
 
@@ -182,6 +195,7 @@ const SmallText = styled.span`
   font-size: 14px;
   text-transform: uppercase;
   color: #9c9c9c;
+  white-space:nowrap;
 
   :after {
     content: "";
@@ -189,9 +203,8 @@ const SmallText = styled.span`
     top: 6px;
     left: 140px;
     width: 82px;
-    height: 1px;
+    height: 0.4px;
     background-color: #9c9c9c;
   }
 `;
 export { LeftArrow, RightArrow };
-

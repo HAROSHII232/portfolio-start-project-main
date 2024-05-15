@@ -6,6 +6,7 @@ import { theme } from "../../styles/Theme";
 import { Container } from "../../components/Container";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
+import { font } from "../../styles/Common";
 
 const headerItems = [
   "Каталог",
@@ -28,7 +29,7 @@ export const Header = () => {
             align="flex-end"
             justify="space-between"
           >
-            <FlexWrapper gap="10px">
+            <IconsWrapper>
               <Icon
                 iconId={"whatsUp"}
                 width="20"
@@ -48,7 +49,8 @@ export const Header = () => {
                 height="20"
                 viewBox="0 0 20 20"
               />
-            </FlexWrapper>
+            </IconsWrapper>
+
             <HeaderMenu menuItems={headerItems} />
             <MobileMenu menuItems={headerItems} />
           </FlexWrapper>
@@ -64,6 +66,10 @@ const StyledHeader = styled.header`
 
   @media ${theme.media.tablet} {
     padding-top: 0px;
+
+    ${Container} {
+      padding-top: 5px;
+    }
   }
 `;
 
@@ -76,11 +82,25 @@ const Logo = styled.a`
 
     @media ${theme.media.tablet} {
       width: 93px;
-      height: 37px;
+      height: 28px;
+    }
+  }
+`;
+
+const IconsWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  @media ${theme.media.mobile} {
+    justify-content: flex-end;
+    svg:last-child {
+      margin: 11px 40px 0;
+      margin-right: 40px;
     }
   }
 `;
 
 const Phone = styled.a`
-  font-size: 19px;
+  ${font({ Fmax: 19, Fmin: 16 })}
 `;
