@@ -13,7 +13,7 @@ export const Promo = () => {
   return (
     <StyledPromo>
       <Container>
-        <FlexWrapper gap="125px">
+        <FlexWrapper gap="150px">
           <PromoInfo>
             <SmallText>камень с душой</SmallText>
             <MainTitle>
@@ -60,6 +60,7 @@ export const Promo = () => {
 };
 
 const StyledPromo = styled.section`
+  padding: 0px 0px 60px;
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.93) 0%,
@@ -73,7 +74,7 @@ const StyledPromo = styled.section`
   & > ${Container} > ${FlexWrapper} {
     position: relative;
 
-    @media ${theme.media.mobile}{
+    @media ${theme.media.mobile} {
       gap: 0;
     }
   }
@@ -114,13 +115,13 @@ const StyledPromo = styled.section`
 
 const PromoInfo = styled.div`
   position: absolute;
-  top: 110px;
+  top: 120px;
   left: -100px;
   z-index: 1;
 
   display: flex;
   flex-direction: column;
-  padding: 67px 42px 58px 102px;
+  padding: 72px 42px 58px 102px;
   max-width: 743px;
   background-color: ${theme.colors.secondaryBg};
 
@@ -140,7 +141,6 @@ const PromoInfo = styled.div`
 
   @media ${theme.media.mobile} {
     width: 100%;
-
   }
 `;
 
@@ -167,7 +167,7 @@ const PhotoWrapper = styled.div`
 
 const Photo = styled.img`
   width: 978px;
-  height: 603px;
+  height: 597px;
   object-fit: cover;
 
   @media screen and (max-width: 1430px) {
@@ -178,7 +178,7 @@ const Photo = styled.img`
 const MainTitle = styled.h1`
   ${font({ Fmax: 50, Fmin: 29 })}
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   span {
     color: #28553f;
@@ -195,7 +195,7 @@ const SmallText = styled.span`
   font-size: 14px;
   text-transform: uppercase;
   color: #9c9c9c;
-  white-space:nowrap;
+  white-space: nowrap;
 
   :after {
     content: "";
