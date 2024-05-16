@@ -41,7 +41,6 @@ const StyledOffer = styled.div`
   line-height: 137%;
   color: #000;
   padding: 14px 18px;
-  gap: 17px;
 
   button {
     height: 40px;
