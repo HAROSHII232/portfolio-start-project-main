@@ -79,7 +79,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     background-color: ${theme.colors.primaryFont};
 
     position: absolute;
-    top: 18px;
+    top: 16px;
     left: 10px;
 
     ${(props) =>

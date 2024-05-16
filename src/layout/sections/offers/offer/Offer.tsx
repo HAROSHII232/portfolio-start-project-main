@@ -15,12 +15,14 @@ export const Offer = (props: OfferPropsType) => {
     <StyledOffer>
       <SmallText>Акция</SmallText>
       <Image src={props.src} alt="Акционное предложение" />
-      <Brand>{props.brand}</Brand>
-      <Title>{props.name}</Title>
-      <PriceWrapper>
-        <NewPrice>{props.newPrice}</NewPrice>
-        <OldPrice>{props.oldPrice}</OldPrice>
-      </PriceWrapper>
+      <OfferInfo>
+        <Brand>{props.brand}</Brand>
+        <Title>{props.name}</Title>
+        <PriceWrapper>
+          <NewPrice>{props.newPrice}</NewPrice>
+          <OldPrice>{props.oldPrice}</OldPrice>
+        </PriceWrapper>
+      </OfferInfo>
       <Button>Подробнее</Button>
     </StyledOffer>
   );
@@ -43,6 +45,27 @@ const StyledOffer = styled.div`
 
   button {
     height: 40px;
+
+    @media ${theme.media.mobile} {
+      height: 50px;
+    }
+  }
+
+  @media ${theme.media.mobile} {
+    max-width: 320px;
+    min-height: 549px;
+
+    gap: 0;
+  }
+`;
+
+const OfferInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 26px 15px 21px;
+
+  @media ${theme.media.mobile} {
+    padding: 36px 15px;
   }
 `;
 
@@ -54,12 +77,22 @@ const SmallText = styled.div`
   font-size: 17px;
   color: #000;
   background: rgba(255, 255, 255, 0.45);
+
+  @media ${theme.media.mobile} {
+    padding: 11px 25px;
+  }
 `;
 
 const Image = styled.img`
   width: 247px;
   height: 220px;
   object-fit: cover;
+  object-position: center, center;
+
+  @media ${theme.media.mobile} {
+    width: 280px;
+    height: 271px;
+  }
 `;
 
 const Brand = styled.span`
@@ -69,7 +102,14 @@ const Brand = styled.span`
   color: ${theme.colors.accent};
 `;
 
-const Title = styled.span``;
+const Title = styled.span`
+  margin: 5px 0 16px;
+
+  @media ${theme.media.mobile} {
+    margin:10px 0 30px;
+    padding-right: 30px;
+  }
+`;
 
 const PriceWrapper = styled.div`
   display: flex;

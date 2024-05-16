@@ -5,6 +5,7 @@ import { Icon } from "../../components/icon/Icon";
 import { FooterMenu } from "../../components/menu/Menu";
 import { theme } from "../../styles/Theme";
 import { Container } from "../../components/Container";
+import { font } from "../../styles/Common";
 
 const footerMenuItems = ["Delivery & returns", "FAQ", "Contacts", "Blog"];
 const footerCatalogItems = ["New arrivals", "Trending now", "Sales", "Brands"];
@@ -119,6 +120,10 @@ const StyledFooter = styled.footer`
       padding-bottom: 0;
     }
   }
+
+  @media ${theme.media.mobile} {
+    padding-bottom: 0;
+  }
 `;
 
 const FooterLogo = styled.img`
@@ -146,25 +151,41 @@ const ContactTitle = styled.h3`
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 12px;
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 14px;
+  }
 `;
 
 const Phone = styled.a`
   margin-bottom: 5px;
   span {
     opacity: 0.6;
+
+    @media ${theme.media.mobile} {
+      font-size: 20px;
+    }
   }
 `;
 
 const Email = styled.a`
   span {
     opacity: 0.6;
+
+    @media ${theme.media.mobile} {
+      font-size: 20px;
+    }
   }
 `;
 
 const SocialList = styled.ul`
   display: flex;
   margin-top: 33px;
-  gap: 12px;
+  gap: 14px;
+
+  @media ${theme.media.mobile} {
+    margin-top: 16px;
+  }
 `;
 
 const SocialItem = styled.li`
@@ -197,11 +218,10 @@ const SocialLink = styled.a`
 const Adress = styled.a`
   display: flex;
   justify-content: center;
-  font-weight: 400;
-  font-size: 16px;
+
+  ${font({ Fmax: 16, Fmin: 13 })};
   line-height: 175%;
   text-align: center;
-  color: #fff;
   margin-top: 25px;
 
   position: relative;
@@ -215,11 +235,16 @@ const Adress = styled.a`
     height: 1px;
     background-color: #fff;
     opacity: 0.15;
+
+    @media ${theme.media.mobile} {
+      top: 0;
+    }
   }
 
   @media ${theme.media.mobile} {
-    padding: 15px 50px 13px;
+    padding: 15px 75px 13px;
     line-height: 1.2;
+    margin-top: 45px;
   }
 `;
 

@@ -71,6 +71,10 @@ const StyledHeader = styled.header`
       padding-top: 5px;
     }
   }
+
+  @media ${theme.media.mobile} {
+    padding-bottom: 100px;
+  }
 `;
 
 const Logo = styled.a`
@@ -81,8 +85,8 @@ const Logo = styled.a`
     object-fit: contain;
 
     @media ${theme.media.tablet} {
-      width: 93px;
-      height: 28px;
+      width: 82px;
+      height: 32px;
     }
   }
 `;
@@ -95,8 +99,7 @@ const IconsWrapper = styled.div`
   @media ${theme.media.mobile} {
     justify-content: flex-end;
     svg:last-child {
-      margin: 11px 40px 0;
-      margin-right: 40px;
+      margin-right: 44px;
     }
   }
 `;

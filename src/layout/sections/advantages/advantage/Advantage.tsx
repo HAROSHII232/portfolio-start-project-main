@@ -28,14 +28,14 @@ export const Advantage = (props: AdvantagePropsType) => {
   );
 };
 
-const StyledAdvantage = styled.div``;
+const StyledAdvantage = styled.div`
+
+`;
 
 const IconWrapper = styled.div`
-
   padding: 0px 10px;
   display: flex;
-  align-items:center;
-
+  align-items: center;
 `;
 
 const Line = styled.span`
@@ -50,6 +50,10 @@ const AdvantageTitle = styled.h3`
   text-transform: uppercase;
   color: ${theme.colors.secondaryFont};
   margin-bottom: 20px;
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 0;
+  }
 `;
 
 const AdvantageNumber = styled.div`

@@ -76,7 +76,11 @@ const Title = styled.h3`
   line-height: 150%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  position: absolute;
 
+  position: absolute;
   bottom: 20px;
+
+  @media ${theme.media.mobile} {
+    height: 45px;
+  }
 `;

@@ -108,6 +108,10 @@ const StyledOffer = styled.section`
       &:hover {
         opacity: 0.7;
       }
+
+      @media ${theme.media.mobile} {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -200,12 +204,16 @@ const OffersItemsWrapper = styled.div`
       max-width: 282px;
       justify-content: flex-start;
     }
+
+    @media ${theme.media.mobile} {
+      max-width: 320px;
+    }
   }
 
   ${LeftArrow}, ${RightArrow} {
     display: none;
     position: absolute;
-    top: 47%;
+    top: 50%;
     z-index: 1;
     border: 1px solid #e5e5e5;
     border-radius: 4px;
@@ -222,11 +230,11 @@ const OffersItemsWrapper = styled.div`
   }
 
   ${RightArrow} {
-    right: -22.5px;
+    right: -19.5px;
   }
 
   @media ${theme.media.mobile} {
-    margin-top: 370px;
+    margin-top: 340px;
   }
 `;
 

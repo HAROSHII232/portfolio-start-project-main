@@ -57,7 +57,7 @@ const StyledContacts = styled.section`
     text-transform: uppercase;
   }
 
-  span+span {
+  span + span {
     margin-top: 10px;
   }
 
@@ -85,13 +85,14 @@ const StyledForm = styled.form`
     background-color: white;
     text-transform: none;
 
-    @media ${theme.media.tablet} {
+    @media ${theme.media.mobile} {
       width: 100%;
     }
   }
 
   @media ${theme.media.tablet} {
     flex-direction: column;
+    gap: 10px;    
   }
 `;
 
@@ -108,6 +109,10 @@ const Field = styled.input`
     font-size: 14px;
     line-height: 135%;
     color: #f3f3f3;
+  }
+
+  @media ${theme.media.mobile} {
+    width: 100%;
   }
 `;
 

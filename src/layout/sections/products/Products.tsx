@@ -55,9 +55,7 @@ export const Products = () => {
 };
 
 const StyledProducts = styled.section`
-
   padding-bottom: 41px;
-
 
   button {
     border: 1px solid #b1b1b1;
@@ -70,9 +68,11 @@ const StyledProducts = styled.section`
     }
   }
 
-
-
   @media ${theme.media.mobile} {
     padding: 35px 0px;
+
+    ${FlexWrapper} ~ a {
+      margin: 36px 0 30px;
+    }
   }
 `;

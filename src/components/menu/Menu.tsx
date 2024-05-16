@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 type FooterMenuPropsType = {
   menuItems: Array<string>;
@@ -42,6 +43,10 @@ const MenuList = styled.ul`
 
 const MenuItem = styled.li`
   margin-bottom: 4px;
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 0;
+  }
 `;
 
 const MenuLink = styled.a`

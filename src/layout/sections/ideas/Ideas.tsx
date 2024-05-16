@@ -89,6 +89,7 @@ export const Ideas = () => {
 
 const StyledIdeas = styled.section`
   padding-bottom: 100px;
+
   button {
     border: 1px solid #b1b1b1;
     border-radius: 4px;
@@ -119,7 +120,7 @@ const StyledIdeas = styled.section`
 
     @media ${theme.media.tablet} {
       padding: 0 15px;
-      margin-top: 25px;
+      margin-top: 17px;
 
       align-self: center;
     }
@@ -135,6 +136,10 @@ const StyledIdeas = styled.section`
         color: ${theme.colors.secondaryFont};
       }
     }
+  }
+
+  @media ${theme.media.mobile} {
+    padding: 50px 0 30px;
   }
 `;
 

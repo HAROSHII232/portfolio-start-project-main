@@ -85,6 +85,7 @@ const StyledPromo = styled.section`
 
     @media ${theme.media.mobile} {
       width: 100%;
+      height: 55px;
     }
   }
 
@@ -185,7 +186,7 @@ const MainTitle = styled.h1`
   }
 
   @media ${theme.media.mobile} {
-    margin: 9px 0 25px;
+    margin: 9px 0 54px;
   }
 `;
 

@@ -40,7 +40,7 @@ export const Advantages = () => {
 };
 
 const StyledAdvantages = styled.section`
-  & ${SectionTitle} {
+  ${SectionTitle} {
     text-align: center;
     margin-bottom: 50px;
 
@@ -48,23 +48,27 @@ const StyledAdvantages = styled.section`
       left: 50%;
       transform: translateX(-50%);
     }
+
+    @media ${theme.media.mobile} {
+      margin-bottom: 35px;
+    }
   }
-  & ${Container} {
+  @media ${theme.media.mobile} {
+    padding-top: 35px;
+  }
+
+  ${Container} {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  & ${FlexWrapper}~${FlexWrapper} {
+  ${FlexWrapper}~${FlexWrapper} {
     text-align: right;
 
     & ${FlexWrapper} {
       flex-direction: row-reverse;
     }
-  }
-
-  & > ${FlexWrapper} >${FlexWrapper} > div:nth-child(2) h3{
-    color: red;
   }
 
   @media screen and (max-width: 1300px) {
