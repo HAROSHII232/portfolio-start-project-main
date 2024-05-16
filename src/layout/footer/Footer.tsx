@@ -9,6 +9,23 @@ import { font } from "../../styles/Common";
 
 const footerMenuItems = ["Delivery & returns", "FAQ", "Contacts", "Blog"];
 const footerCatalogItems = ["New arrivals", "Trending now", "Sales", "Brands"];
+const SocialItemsData = [
+  {
+    iconId: "facebook",
+  },
+  {
+    iconId: "inst",
+  },
+  {
+    iconId: "twitter",
+  },
+  {
+    iconId: "youtube",
+  },
+  {
+    iconId: "pinterest",
+  },
+];
 
 export const Footer = () => {
   return (
@@ -27,56 +44,20 @@ export const Footer = () => {
               Почта: <span>hello@createx.com</span>
             </Email>
             <SocialList>
-              <SocialItem>
-                <SocialLink>
-                  <Icon
-                    iconId="facebook"
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                  />
-                </SocialLink>
-              </SocialItem>
-              <SocialItem>
-                <SocialLink>
-                  <Icon
-                    iconId="inst"
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                  />
-                </SocialLink>
-              </SocialItem>
-              <SocialItem>
-                <SocialLink>
-                  <Icon
-                    iconId="twitter"
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                  />
-                </SocialLink>
-              </SocialItem>
-              <SocialItem>
-                <SocialLink>
-                  <Icon
-                    iconId="youtube"
-                    width="17"
-                    height="12"
-                    viewBox="0 0 17 12"
-                  />
-                </SocialLink>
-              </SocialItem>
-              <SocialItem>
-                <SocialLink>
-                  <Icon
-                    iconId="pinterest"
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                  />
-                </SocialLink>
-              </SocialItem>
+              {SocialItemsData.map((s, index) => {
+                return (
+                  <SocialItem key={index}>
+                    <SocialLink>
+                      <Icon
+                        iconId={s.iconId}
+                        width="17"
+                        height="16"
+                        viewBox="0 0 17 16"
+                      />
+                    </SocialLink>
+                  </SocialItem>
+                );
+              })}
             </SocialList>
           </Contact>
         </FlexWrapper>
