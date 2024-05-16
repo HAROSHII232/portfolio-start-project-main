@@ -11,9 +11,9 @@ export const HeaderMenu = (props: HeaderMenuPropsType) => {
       <ul>
         {props.menuItems.map((item, index) => {
           return (
-            <ListItem key={index}>
+            <MenuItem key={index}>
               <Link href="#">{item}</Link>
-            </ListItem>
+            </MenuItem>
           );
         })}
       </ul>
@@ -25,6 +25,11 @@ const StyledHeaderMenu = styled.nav`
   ul {
     display: flex;
     gap: 90px;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      gap: 15px;
+
+    }
   }
 
   @media screen and (max-width: 970px) {
@@ -32,10 +37,10 @@ const StyledHeaderMenu = styled.nav`
   }
 `;
 
-const ListItem = styled.li`
+const MenuItem = styled.li`
   position: relative;
   cursor: pointer;
-  padding-bottom:36px;
+  padding-bottom: 36px;
 
   &::after {
     content: "";

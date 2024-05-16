@@ -7,6 +7,7 @@ import { Container } from "../../components/Container";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 import { font } from "../../styles/Common";
+import React from "react";
 
 const headerItems = [
   "Каталог",
@@ -16,7 +17,17 @@ const headerItems = [
   "Оплата и доставка",
 ];
 
-export const Header = () => {
+export const Header: React.FC = () => {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 1000;
+
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   return (
     <StyledHeader>
       <Container>
@@ -51,8 +62,11 @@ export const Header = () => {
               />
             </IconsWrapper>
 
-            <HeaderMenu menuItems={headerItems} />
-            <MobileMenu menuItems={headerItems} />
+            {width <= breakpoint ? (
+              <MobileMenu menuItems={headerItems} />
+            ) : (
+              <HeaderMenu menuItems={headerItems} />
+            )}
           </FlexWrapper>
         </FlexWrapper>
       </Container>

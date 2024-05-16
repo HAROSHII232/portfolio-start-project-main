@@ -9,7 +9,7 @@ import { Button, LeftArrow, RightArrow } from "../../../components/Button";
 import { Icon } from "../../../components/icon/Icon";
 import { font } from "../../../styles/Common";
 
-export const Promo = () => {
+export const Promo: React.FC = () => {
   return (
     <StyledPromo>
       <Container>
@@ -142,12 +142,8 @@ const PromoInfo = styled.div`
   @media ${theme.media.tablet} {
     padding: 0;
     background-color: transparent;
-    width: 100px;
   }
 
-  @media ${theme.media.mobile} {
-    width: 100%;
-  }
 `;
 
 const PhotoWrapper = styled.div`

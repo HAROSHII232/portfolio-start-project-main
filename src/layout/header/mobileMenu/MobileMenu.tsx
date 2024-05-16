@@ -5,7 +5,9 @@ type MobileMenuPropsType = {
   menuItems: Array<string>;
 };
 
-export const MobileMenu = (props: MobileMenuPropsType) => {
+export const MobileMenu: React.FC<MobileMenuPropsType> = (
+  props: MobileMenuPropsType
+) => {
   return (
     <StyledMobileMenu>
       <BurgerButton isOpen={false}>
@@ -27,13 +29,7 @@ export const MobileMenu = (props: MobileMenuPropsType) => {
   );
 };
 
-const StyledMobileMenu = styled.nav`
-  display: none;
-
-  @media screen and (max-width: 970px) {
-    display: block;
-  }
-`;
+const StyledMobileMenu = styled.nav``;
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
