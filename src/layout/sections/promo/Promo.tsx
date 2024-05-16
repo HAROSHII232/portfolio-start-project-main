@@ -112,6 +112,11 @@ const StyledPromo = styled.section`
       display: none;
     }
   }
+
+  @media ${theme.media.mobile} {
+    padding-top: 100px;
+    background-position-x: 20%;
+  }
 `;
 
 const PromoInfo = styled.div`

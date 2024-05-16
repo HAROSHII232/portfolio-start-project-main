@@ -73,7 +73,7 @@ const StyledHeader = styled.header`
   }
 
   @media ${theme.media.mobile} {
-    padding-bottom: 100px;
+    padding-bottom: 0;
   }
 `;
 
