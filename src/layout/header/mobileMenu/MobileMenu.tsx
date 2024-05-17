@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
+import { useState } from "react";
 
 type MobileMenuPropsType = {
   menuItems: Array<string>;
@@ -8,13 +9,18 @@ type MobileMenuPropsType = {
 export const MobileMenu: React.FC<MobileMenuPropsType> = (
   props: MobileMenuPropsType
 ) => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const onBurgerBtnClick = () => {
+    setMenuIsOpen(!menuIsOpen);
+  };
+
   return (
     <StyledMobileMenu>
-      <BurgerButton isOpen={false}>
+      <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
         <span></span>
       </BurgerButton>
 
-      <MobileMenuPopup isOpen={false}>
+      <MobileMenuPopup isOpen={menuIsOpen} onClick={()=>{setMenuIsOpen(false)}}>
         <ul>
           {props.menuItems.map((item, index) => {
             return (
