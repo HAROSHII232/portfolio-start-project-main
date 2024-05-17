@@ -97,6 +97,8 @@ const Logo = styled.a`
     height: 115px;
     width: 100%;
     object-fit: contain;
+    z-index: 999999;
+    position: relative;
 
     @media ${theme.media.tablet} {
       width: 82px;
@@ -109,6 +111,8 @@ const IconsWrapper = styled.div`
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
+  z-index: 999999;
+  position: relative;
 
   @media ${theme.media.mobile} {
     justify-content: flex-end;

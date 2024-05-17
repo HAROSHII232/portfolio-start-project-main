@@ -20,7 +20,12 @@ export const MobileMenu: React.FC<MobileMenuPropsType> = (
         <span></span>
       </BurgerButton>
 
-      <MobileMenuPopup isOpen={menuIsOpen} onClick={()=>{setMenuIsOpen(false)}}>
+      <MobileMenuPopup
+        isOpen={menuIsOpen}
+        onClick={() => {
+          setMenuIsOpen(false);
+        }}
+      >
         <ul>
           {props.menuItems.map((item, index) => {
             return (
@@ -42,7 +47,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 90px;
   z-index: 99999;
   display: none;
 
@@ -52,20 +57,20 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     props.isOpen &&
     css<{ isOpen: boolean }>`
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
     `}
 
   ul {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+
+    width: 85%;
   }
 `;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
-  position: absolute;
+  position: fixed;
   top: 37px;
   right: 18px;
   z-index: 9999999;
@@ -130,7 +135,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
 const ListItem = styled.li`
   position: relative;
-  padding: 27px 38px;
+  padding: 27px 0;
   cursor: pointer;
 
   width: 100%;
