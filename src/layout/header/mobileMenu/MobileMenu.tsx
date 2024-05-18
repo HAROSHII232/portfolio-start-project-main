@@ -47,7 +47,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   top: 0;
   left: 0;
   right: 0;
-  bottom: 90px;
+  bottom: 100px;
   z-index: 99999;
   display: none;
 

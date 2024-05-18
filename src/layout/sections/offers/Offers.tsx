@@ -1,16 +1,12 @@
 import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/SectionTitle";
-import { Offer } from "./offer/Offer";
-import image from "../../../assets/images/offer-item.webp";
 import backgroundImg from "../../../assets/images/offer-background.webp";
-import { Pagination } from "../../../components/pagination/Pagination";
 import { Container } from "../../../components/Container";
-import { Button, LeftArrow, RightArrow } from "../../../components/Button";
+import { Button} from "../../../components/Button";
 import { theme } from "../../../styles/Theme";
 import { SeeAll } from "../../../components/SeeAll";
-import { Icon } from "../../../components/icon/Icon";
 import { font } from "../../../styles/Common";
+import { Slider } from "./slider/Slider";
 
 export const Offers = () => {
   return (
@@ -29,55 +25,7 @@ export const Offers = () => {
           </OffersInfo>
           <OffersItemsWrapper>
             <SeeAll />
-            <FlexWrapper wrap={"wrap"} gap="37px" justify="flex-end">
-              <Offer
-                src={image}
-                brand={"Kratki"}
-                name={"Каминная топка Kratki ZUZIA LPT"}
-                newPrice={"16 490 ₽"}
-                oldPrice={"16 490 ₽"}
-              />
-              <Offer
-                src={image}
-                brand={"Kratki"}
-                name={"Каминная топка Kratki ZUZIA LPT"}
-                newPrice={"16 490 ₽"}
-                oldPrice={"16 490 ₽"}
-              />
-              <Offer
-                src={image}
-                brand={"Kratki"}
-                name={"Каминная топка Kratki ZUZIA LPT"}
-                newPrice={"16 490 ₽"}
-                oldPrice={"16 490 ₽"}
-              />
-              <Offer
-                src={image}
-                brand={"Kratki"}
-                name={"Каминная топка Kratki ZUZIA LPT"}
-                newPrice={"16 490 ₽"}
-                oldPrice={"16 490 ₽"}
-              />
-            </FlexWrapper>
-            <LeftArrow>
-              <Icon
-                iconId={"arrow-left"}
-                width="17"
-                height="17"
-                viewBox="0 0 17 17"
-                fill="#b1b1b1"
-              />
-            </LeftArrow>
-            <RightArrow>
-              <Icon
-                iconId={"arrow-right"}
-                width="17"
-                height="17"
-                viewBox="0 0 17 17"
-                fill="#b1b1b1"
-              />
-            </RightArrow>
-            <Pagination />
+            <Slider />
           </OffersItemsWrapper>
         </OffersContent>
       </Container>
@@ -135,7 +83,7 @@ const OffersContent = styled.div`
   align-items: center;
   gap: 35px;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1439px) {
     flex-direction: column;
   }
 `;
@@ -191,47 +139,6 @@ const OffersItemsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  ${FlexWrapper} {
-    @media screen and (max-width: 1200px) {
-      justify-content: center;
-    }
-
-    @media ${theme.media.tablet} {
-      flex-direction: row;
-      flex-wrap: nowrap;
-      overflow: hidden;
-      max-width: 282px;
-      justify-content: flex-start;
-    }
-
-    @media ${theme.media.mobile} {
-      max-width: 320px;
-    }
-  }
-
-  ${LeftArrow}, ${RightArrow} {
-    display: none;
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    border: 1px solid #e5e5e5;
-    border-radius: 4px;
-
-    background-color: #f9f9f9;
-
-    @media ${theme.media.mobile} {
-      display: block;
-    }
-  }
-
-  ${LeftArrow} {
-    left: -22.5px;
-  }
-
-  ${RightArrow} {
-    right: -19.5px;
-  }
 
   @media ${theme.media.mobile} {
     margin-top: 340px;

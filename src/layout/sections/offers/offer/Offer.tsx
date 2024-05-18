@@ -50,7 +50,7 @@ const StyledOffer = styled.div`
     }
   }
 
-  @media ${theme.media.mobile} {
+  @media screen and (max-width: 700px) {
     max-width: 320px;
     min-height: 549px;
 
@@ -63,7 +63,7 @@ const OfferInfo = styled.div`
   flex-direction: column;
   padding: 26px 15px 21px;
 
-  @media ${theme.media.mobile} {
+  @media screen and (max-width: 700px) {
     padding: 36px 15px;
   }
 `;
@@ -77,7 +77,7 @@ const SmallText = styled.div`
   color: #000;
   background: rgba(255, 255, 255, 0.45);
 
-  @media ${theme.media.mobile} {
+  @media screen and (max-width: 700px) {
     padding: 11px 25px;
   }
 `;
@@ -88,7 +88,7 @@ const Image = styled.img`
   object-fit: cover;
   object-position: center, center;
 
-  @media ${theme.media.mobile} {
+  @media screen and (max-width: 700px) {
     width: 280px;
     height: 271px;
   }
@@ -104,7 +104,7 @@ const Brand = styled.span`
 const Title = styled.span`
   margin: 5px 0 16px;
 
-  @media ${theme.media.mobile} {
+  @media screen and (max-width: 700px) {
     margin:10px 0 30px;
     padding-right: 30px;
   }
