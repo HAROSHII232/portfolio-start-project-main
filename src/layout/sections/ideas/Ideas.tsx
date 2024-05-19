@@ -15,7 +15,7 @@ import { LeftArrow, RightArrow, Button } from "../../../components/Button";
 
 export const Ideas = () => {
   return (
-    <StyledIdeas>
+    <StyledIdeas id={'блог'}>
       <Container>
         <FlexWrapper justify="space-between" align="flex-end">
           <SectionTitle>

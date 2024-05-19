@@ -12,7 +12,7 @@ export const HeaderMenu = (props: HeaderMenuPropsType) => {
         {props.menuItems.map((item, index) => {
           return (
             <MenuItem key={index}>
-              <Link href="#">{item}</Link>
+              <Link href={`#${item.toLocaleLowerCase()}`}>{item}</Link>
             </MenuItem>
           );
         })}
@@ -28,7 +28,6 @@ const StyledHeaderMenu = styled.nav`
 
     @media screen and (min-width: 768px) and (max-width: 1200px) {
       gap: 15px;
-
     }
   }
 

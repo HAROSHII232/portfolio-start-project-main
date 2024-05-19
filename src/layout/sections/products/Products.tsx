@@ -14,7 +14,7 @@ import { theme } from "../../../styles/Theme";
 
 export const Products = () => {
   return (
-    <StyledProducts>
+    <StyledProducts id={'каталог'}>
       <Container>
         <SectionTitle>
           Изделия из <span> натурального камня </span>

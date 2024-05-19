@@ -8,7 +8,7 @@ import { font } from "../../../styles/Common";
 
 export const Contacts = () => {
   return (
-    <StyledContacts>
+    <StyledContacts id={'сотрудничество'}>
       <Container>
         <FlexWrapper direction="column">
           <span>Остались вопросы?</span>

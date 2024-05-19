@@ -101,7 +101,6 @@ const StyledSlider = styled.div`
   flex-wrap: wrap;
   gap: 37px;
   justify-content: flex-end;
-  border: 1px solid red;
   max-width: 600px;
   width: 100%;
 

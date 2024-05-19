@@ -10,7 +10,7 @@ import { Slider } from "./slider/Slider";
 
 export const Offers = () => {
   return (
-    <StyledOffer>
+    <StyledOffer id={'акции'}>
       <Container>
         <OffersContent>
           <OffersInfo>
