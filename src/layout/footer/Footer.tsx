@@ -10,18 +10,33 @@ const footerCatalogItems = ["New arrivals", "Trending now", "Sales", "Brands"];
 const SocialItemsData = [
   {
     iconId: "facebook",
+    width: "9",
+    height: "16",
+    viewBox: "0 0 9 16",
   },
   {
     iconId: "inst",
+    width: "14",
+    height: "14",
+    viewBox: "0 0 14 14",
   },
   {
     iconId: "twitter",
+    width: "15",
+    height: "12",
+    viewBox: "0 0 15 12",
   },
   {
     iconId: "youtube",
+    width: "17",
+    height: "12",
+    viewBox: "0 0 17 12",
   },
   {
     iconId: "pinterest",
+    width: "13",
+    height: "16",
+    viewBox: "0 0 13 16",
   },
 ];
 
@@ -48,9 +63,9 @@ export const Footer = () => {
                     <S.SocialLink>
                       <Icon
                         iconId={s.iconId}
-                        width="17"
-                        height="16"
-                        viewBox="0 0 17 16"
+                        width={s.width}
+                        height={s.height}
+                        viewBox={s.viewBox}
                       />
                     </S.SocialLink>
                   </S.SocialItem>
@@ -59,7 +74,6 @@ export const Footer = () => {
             </S.SocialList>
           </S.Contact>
         </FlexWrapper>
-
       </Container>
       <S.Adress>674 Gonzales Drive. Washington, PA 15301</S.Adress>
     </S.Footer>

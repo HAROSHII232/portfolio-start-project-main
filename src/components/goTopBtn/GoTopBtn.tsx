@@ -41,12 +41,9 @@ const StyledGoTopBtn = styled.a`
   position: fixed;
   right: 42px;
   bottom: 43px;
+  transition: ${theme.animation.transition};
 
   &:hover {
-    opacity: 0.6;
-  }
-
-  @media ${theme.media.tablet} {
-    display: none;
+    opacity: 0.7;
   }
 `;

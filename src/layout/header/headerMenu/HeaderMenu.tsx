@@ -52,6 +52,7 @@ const MenuItem = styled.li`
     background-color: ${theme.colors.primaryFont};
 
     transform: scale(0);
+    transition: ${theme.animation.transition}
   }
 
   &:hover {

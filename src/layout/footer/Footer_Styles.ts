@@ -107,6 +107,11 @@ const SocialItem = styled.li`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: ${theme.animation.transition};
+
+  &:hover {
+    transform: translateY(-20%)
+  }
 
   @media ${theme.media.tablet} {
     width: 53px;

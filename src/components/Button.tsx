@@ -8,6 +8,7 @@ export const Button = styled.button`
   text-align: center;
   color: #fff;
   background-color: ${theme.colors.accent};
+  transition: ${theme.animation.transition};
 `;
 
 export const LeftArrow = styled.button`
