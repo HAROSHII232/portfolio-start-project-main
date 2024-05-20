@@ -110,7 +110,8 @@ const SocialItem = styled.li`
   transition: ${theme.animation.transition};
 
   &:hover {
-    transform: translateY(-20%)
+    transform: translateY(-20%);
+    background-color: ${theme.colors.accent}
   }
 
   @media ${theme.media.tablet} {

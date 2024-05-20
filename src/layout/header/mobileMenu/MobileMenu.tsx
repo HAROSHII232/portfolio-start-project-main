@@ -30,7 +30,7 @@ export const MobileMenu: React.FC<MobileMenuPropsType> = (
           {props.menuItems.map((item, index) => {
             return (
               <ListItem key={index}>
-                <Link href="#">{item}</Link>
+                <Link href={`#${item.toLocaleLowerCase()}`}>{item}</Link>
               </ListItem>
             );
           })}
@@ -49,16 +49,18 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   right: 0;
   bottom: 100px;
   z-index: 99999;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: ${theme.animation.transition};
 
   background: #000;
 
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      transform: translateY(0%);
     `}
 
   ul {
@@ -105,6 +107,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
       position: absolute;
       transform: translateY(-7px);
+      transition: ${theme.animation.transition};
 
       ${(props) =>
         props.isOpen &&
@@ -123,6 +126,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
       position: absolute;
       transform: translateY(7px);
+      transition: ${theme.animation.transition};
 
       ${(props) =>
         props.isOpen &&
