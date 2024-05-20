@@ -158,28 +158,7 @@ const Adress = styled.a`
   }
 `;
 
-const OnTopButton = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 59px;
-  height: 57px;
-  border-radius: 50%;
-  background-color: ${theme.colors.accent};
-  cursor: pointer;
 
-  position: absolute;
-  right: 40px;
-  top: 5px;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  @media ${theme.media.tablet} {
-    display: none;
-  }
-`;
 
 export const S = {
   Footer,
@@ -192,5 +171,4 @@ export const S = {
   SocialItem,
   SocialLink,
   Adress,
-  OnTopButton,
 };

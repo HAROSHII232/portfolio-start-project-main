@@ -59,14 +59,7 @@ export const Footer = () => {
             </S.SocialList>
           </S.Contact>
         </FlexWrapper>
-        <S.OnTopButton href="#top">
-          <Icon
-            iconId={"arrow-up"}
-            width="14"
-            height="24"
-            viewBox="0 0 14 24"
-          />
-        </S.OnTopButton>
+
       </Container>
       <S.Adress>674 Gonzales Drive. Washington, PA 15301</S.Adress>
     </S.Footer>
