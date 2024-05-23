@@ -92,6 +92,8 @@ const StyledHeader = styled.header`
 `;
 
 const Logo = styled.a`
+  margin-right: 20px;
+  
   img {
     max-width: 246px;
     height: 115px;
