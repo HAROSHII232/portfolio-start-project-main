@@ -111,7 +111,6 @@ const StyledSlider = styled.div`
   @media ${theme.media.tablet} {
     flex-direction: row;
     flex-wrap: nowrap;
-    overflow: hidden;
     justify-content: flex-start;
   }
 
