@@ -13,27 +13,45 @@ export const Advantages = () => {
         <SectionTitle>
           наши преимущества - <span>ваш результат</span>
         </SectionTitle>
-        <FlexWrapper align="center" gap="40px">
-          <FlexWrapper direction="column" gap="63px">
+        <AdvantagesWrapper>
+          <FlexWrapper direction="column" gap="63px" grow="1">
             <Advantage
-              title={"Новейшее итальянское оборудование Donatoni"}
+              titleTop={"Новейшее итальянское"}
+              titleBottom={"оборудование Donatoni"}
               skillNumber={"01"}
             />
-            <Advantage title={"Собственное произодство"} skillNumber={"02"} />
-            <Advantage title={"Широкий ассортимент"} skillNumber={"03"} />
+            <Advantage
+              titleTop={"Собственное"}
+              titleBottom={"произодство"}
+              skillNumber={"02"}
+            />
+            <Advantage
+              titleTop={"Широкий"}
+              titleBottom={"ассортимент"}
+              skillNumber={"03"}
+            />
           </FlexWrapper>
 
           <Photo src={photo} alt="проект ванной комнаты" />
 
-          <FlexWrapper direction="column" gap="60px">
-            <Advantage title={"Изделия из наличия"} skillNumber={"04"} />
-            <Advantage title={"Работаем под ключ"} skillNumber={"05"} />
+          <FlexWrapper direction="column" gap="60px" grow="1">
             <Advantage
-              title={"Консультации по уходу за иделием из камня"}
+              titleTop={"Изделия"}
+              titleBottom={"из наличия"}
+              skillNumber={"04"}
+            />
+            <Advantage
+              titleTop={"Работаем под"}
+              titleBottom={"ключ"}
+              skillNumber={"05"}
+            />
+            <Advantage
+              titleTop={"Консультации по уходу"}
+              titleBottom={"за иделием из камня"}
               skillNumber={"06"}
             />
           </FlexWrapper>
-        </FlexWrapper>
+        </AdvantagesWrapper>
       </Container>
     </StyledAdvantages>
   );
@@ -63,6 +81,23 @@ const StyledAdvantages = styled.section`
     align-items: center;
   }
 
+  @media screen and (max-width: 1150px) {
+    & ${SectionTitle}+${FlexWrapper} {
+      flex-direction: column;
+    }
+  }
+`;
+
+const AdvantagesWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+
+  ${FlexWrapper}{
+    width: 100%;
+  }
+
   ${FlexWrapper}~${FlexWrapper} {
     text-align: right;
 
@@ -71,10 +106,8 @@ const StyledAdvantages = styled.section`
     }
   }
 
-  @media screen and (max-width: 1300px) {
-    & ${SectionTitle}+${FlexWrapper} {
-      flex-direction: column;
-    }
+  @media screen and (max-width: 1150px) {
+    flex-direction: column;
   }
 `;
 
@@ -86,7 +119,7 @@ const Photo = styled.img`
   object-position: left center;
   border: 7px solid ${theme.colors.accent};
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1150px) {
     display: none;
   }
 `;

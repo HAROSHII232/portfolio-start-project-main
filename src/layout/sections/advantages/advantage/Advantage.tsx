@@ -4,14 +4,18 @@ import { Icon } from "../../../../components/icon/Icon";
 import { theme } from "../../../../styles/Theme";
 
 type AdvantagePropsType = {
-  title: string;
+  titleTop: string;
+  titleBottom: string;
   skillNumber: string;
 };
 
 export const Advantage = (props: AdvantagePropsType) => {
   return (
     <StyledAdvantage>
-      <AdvantageTitle>{props.title}</AdvantageTitle>
+      <AdvantageTitle>
+        <span>{props.titleTop}</span>
+        <span>{props.titleBottom}</span>
+      </AdvantageTitle>
       <FlexWrapper align="center">
         <IconWrapper>
           <Icon
@@ -28,9 +32,7 @@ export const Advantage = (props: AdvantagePropsType) => {
   );
 };
 
-const StyledAdvantage = styled.div`
-
-`;
+const StyledAdvantage = styled.div``;
 
 const IconWrapper = styled.div`
   padding: 0px 10px;
@@ -45,11 +47,16 @@ const Line = styled.span`
 `;
 
 const AdvantageTitle = styled.h3`
-  font-weight: 600;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: ${theme.colors.secondaryFont};
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
+
+  span {
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: ${theme.colors.secondaryFont};
+  }
 
   @media ${theme.media.mobile} {
     margin-bottom: 0;
